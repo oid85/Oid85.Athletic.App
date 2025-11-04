@@ -5,7 +5,7 @@ import {sagaExerciseList} from '../../../redux/actions/trainingActions'
 import '../../Report/Report.css'
 import { Table } from '../../Report/Table'
 
-export const Exercises = () => {
+export const Trainings = () => {
 
     const dispatch = useDispatch()
     const loading = useSelector(state => state.app.loading)
@@ -17,7 +17,7 @@ export const Exercises = () => {
 
     return (
         <React.Fragment>
-            <div style={{ border: '1px solid black' }}>1</div>
+            <div style={{ border: '1px solid black' }}>3</div>
         </React.Fragment>
     )
 }
