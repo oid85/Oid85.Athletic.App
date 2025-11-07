@@ -1,0 +1,31 @@
+.exercise-template-list {
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    height: 650px;
+    width: 25%;
+    margin: 1px;
+    overflow-y: scroll;
+}
+
+.traning {
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    height: 650px;
+    width: 50%;
+    margin: 1px;
+}
+
+.traning-list {
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    height: 650px;
+    width: 25%;
+    margin: 1px;
+}
+
+.plan {
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    height: 210px;
+    width: 100%;
+}

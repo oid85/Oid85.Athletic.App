@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import { appReducer } from './appReducer'
-import { trainingReducer } from './trainingReducer'
+import { exerciseTemplateReducer } from './exerciseTemplateReducer'
 
 export const rootReducer = combineReducers({
     app: appReducer,
-	training: trainingReducer
+	exerciseTemplate: exerciseTemplateReducer
 })

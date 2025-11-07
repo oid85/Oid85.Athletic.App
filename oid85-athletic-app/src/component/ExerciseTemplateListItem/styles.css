@@ -1,0 +1,22 @@
+.exercise-template-list-item-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;    
+}
+
+.exercise-template-list-item {
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    text-align: left;    
+    height: 50px;
+    width: 95%;
+    font-size: 18px;
+    margin: 1px;
+    padding: 1px;
+}
+
+.create-exercise-template-list-item-button {
+    width: 95%;
+    margin: 1px;
+    font-size: 10px;
+}

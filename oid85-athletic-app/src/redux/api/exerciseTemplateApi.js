@@ -1,15 +1,15 @@
 ﻿import {CONSTANTS} from "../../constants"
 
-export const exerciseListFromApi = async () => {
+export const getExerciseTemplateListFromApi = async () => {
     const response = await fetch(
-        `${CONSTANTS.FINMARKET_API}/api/training/exercise-list`, {
+        `${CONSTANTS.FINMARKET_API}/api/exercise-templates/list`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-
+                equipment: ''
             })
         })
 
