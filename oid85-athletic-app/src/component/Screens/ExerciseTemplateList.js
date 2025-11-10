@@ -4,6 +4,7 @@ import { sagaGetExerciseTemplateList } from '../../redux/actions/exerciseTemplat
 import Loader from '../Loader/Loader'
 import { ExerciseTemplateListItem } from '../ExerciseTemplateListItem/ExerciseTemplateListItem'
 import { CreateExerciseTemplateListItemButton } from '../ExerciseTemplateListItem/CreateExerciseTemplateListItemButton'
+import {CreateExerciseTemplateModal} from '../../component/ExerciseTemplateListItem/CreateExerciseTemplateModal'
 import './styles.css'
 
 export const ExerciseTemplateList = () => {
@@ -29,6 +30,7 @@ export const ExerciseTemplateList = () => {
                         <ExerciseTemplateListItem key = {index} exerciseTemplate = {exerciseTemplate} />
                     ))
                 }
+                <CreateExerciseTemplateModal />
             </div>            
         }
         </React.Fragment>                
