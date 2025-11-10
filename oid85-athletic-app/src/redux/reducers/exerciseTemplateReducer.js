@@ -7,7 +7,7 @@ import {
 
 const initialState = {
     exerciseTemplateList: {},
-    currentExerciseTemplate: { id: '', name: '', equipment: '', muscles: ''},
+    currentExerciseTemplate: {},
     createExerciseTemplateModalIsOpened: false    
 }
 

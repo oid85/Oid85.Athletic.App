@@ -17,3 +17,24 @@ export const getExerciseTemplateListFromApi = async () => {
         return await response.json()
     }
 }
+
+export const createExerciseTemplateFromApi = async (name, equipment, muscles) => {
+    console.log('createExerciseTemplateFromApi start')
+    const response = await fetch(
+        `${CONSTANTS.FINMARKET_API}/api/exercise-templates/create`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                equipment: equipment,
+                muscles: muscles
+            })
+        })
+
+    if (response.ok) {
+        return await response.json()
+    }
+}
