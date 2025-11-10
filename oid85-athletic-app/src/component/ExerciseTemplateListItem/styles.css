@@ -15,8 +15,10 @@
     padding: 1px;
 }
 
+/*Create modal*/
 .create-exercise-template-list-item-button {
-    width: 95%;
+    height: 50px;
+    width: 460px;
     margin: 1px;
     font-size: 10px;
 }
@@ -34,6 +36,31 @@
 }
 
 .create-exercise-template-modal-input {
+    margin: 5px;
+    font-size: 10px;
+}
+
+/*Edit modal*/
+.edit-exercise-template-list-item-button {
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    font-size: 6px;
+}
+
+.edit-exercise-template-modal-save-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-exercise-template-modal-cancel-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-exercise-template-modal-input {
     margin: 5px;
     font-size: 10px;
 }

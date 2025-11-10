@@ -12,7 +12,9 @@ export const CreateExerciseTemplateListItemButton = () => {
         <React.Fragment>
             <button 
                 className='btn btn-outline-primary create-exercise-template-list-item-button'
-                onClick={() => dispatch(showCreateExerciseTemplateModal())}>Новое упражнение</button>
+                onClick={() => 
+                dispatch(showCreateExerciseTemplateModal())
+                }>Новое упражнение</button>
         </React.Fragment>
     )
 }

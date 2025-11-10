@@ -5,6 +5,7 @@ import Loader from '../Loader/Loader'
 import { ExerciseTemplateListItem } from '../ExerciseTemplateListItem/ExerciseTemplateListItem'
 import { CreateExerciseTemplateListItemButton } from '../ExerciseTemplateListItem/CreateExerciseTemplateListItemButton'
 import {CreateExerciseTemplateModal} from '../../component/ExerciseTemplateListItem/CreateExerciseTemplateModal'
+import {EditExerciseTemplateModal} from '../../component/ExerciseTemplateListItem/EditExerciseTemplateModal'
 import './styles.css'
 
 export const ExerciseTemplateList = () => {
@@ -31,6 +32,7 @@ export const ExerciseTemplateList = () => {
                     ))
                 }
                 <CreateExerciseTemplateModal />
+                <EditExerciseTemplateModal />
             </div>            
         }
         </React.Fragment>                
