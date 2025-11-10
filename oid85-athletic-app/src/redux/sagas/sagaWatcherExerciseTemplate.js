@@ -37,7 +37,7 @@ function* sagaWorkerGetExerciseTemplateList() {
 function* sagaWorkerCreateExerciseTemplate() {    
     yield put(showLoader())        
     let exerciseTemplate = yield select(currentExerciseTemplate)        
-    let createExerciseTemplateResult = yield call(createExerciseTemplateFromApi, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
+    yield call(createExerciseTemplateFromApi, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
     let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
     yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
     yield put(hideLoader())
@@ -46,7 +46,7 @@ function* sagaWorkerCreateExerciseTemplate() {
 function* sagaWorkerEditExerciseTemplate() {    
     yield put(showLoader())        
     let exerciseTemplate = yield select(currentExerciseTemplate)        
-    let editExerciseTemplateResult = yield call(editExerciseTemplateFromApi, exerciseTemplate.id, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
+    yield call(editExerciseTemplateFromApi, exerciseTemplate.id, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
     let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
     yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
     yield put(hideLoader())
@@ -55,7 +55,7 @@ function* sagaWorkerEditExerciseTemplate() {
 function* sagaWorkerDeleteExerciseTemplate() {    
     yield put(showLoader())        
     let exerciseTemplate = yield select(currentExerciseTemplate)        
-    let deleteExerciseTemplateResult = yield call(deleteExerciseTemplateFromApi, exerciseTemplate.id)
+    yield call(deleteExerciseTemplateFromApi, exerciseTemplate.id)
     let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
     yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
     yield put(hideLoader())
