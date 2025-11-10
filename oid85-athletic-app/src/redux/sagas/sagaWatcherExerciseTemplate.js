@@ -28,74 +28,35 @@ export function* sagaWatcherExerciseTemplate() {
 
 // SagaWorker'ы
 function* sagaWorkerGetExerciseTemplateList() {
-    try {
-        yield put(showLoader())
-
-        let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
-        
-        yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
-        yield put(hideLoader())
-    }
-    
-    catch (error) {
-        yield put(showAlert('Ошибка при получении данных'))
-        yield put(hideLoader())
-    }
+    yield put(showLoader())
+    let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)    
+    yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
+    yield put(hideLoader())
 }
 
 function* sagaWorkerCreateExerciseTemplate() {    
-    try {
-        yield put(showLoader())
-        
-        let exerciseTemplate = yield select(currentExerciseTemplate)        
-
-        let createExerciseTemplateResult = yield call(createExerciseTemplateFromApi, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
-        let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
-
-        yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
-        yield put(hideLoader())
-    }
-    
-    catch (error) {
-        yield put(showAlert('Ошибка при получении данных'))
-        yield put(hideLoader())
-    }
+    yield put(showLoader())        
+    let exerciseTemplate = yield select(currentExerciseTemplate)        
+    let createExerciseTemplateResult = yield call(createExerciseTemplateFromApi, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
+    let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
+    yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
+    yield put(hideLoader())
 }
 
 function* sagaWorkerEditExerciseTemplate() {    
-    try {
-        yield put(showLoader())
-        
-        let exerciseTemplate = yield select(currentExerciseTemplate)        
-
-        let editExerciseTemplateResult = yield call(editExerciseTemplateFromApi, exerciseTemplate.id, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
-        let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
-
-        yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
-        yield put(hideLoader())
-    }
-    
-    catch (error) {
-        yield put(showAlert('Ошибка при получении данных'))
-        yield put(hideLoader())
-    }
+    yield put(showLoader())        
+    let exerciseTemplate = yield select(currentExerciseTemplate)        
+    let editExerciseTemplateResult = yield call(editExerciseTemplateFromApi, exerciseTemplate.id, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
+    let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
+    yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
+    yield put(hideLoader())
 }
 
 function* sagaWorkerDeleteExerciseTemplate() {    
-    try {
-        yield put(showLoader())
-        
-        let exerciseTemplate = yield select(currentExerciseTemplate)        
-
-        let deleteExerciseTemplateResult = yield call(deleteExerciseTemplateFromApi, exerciseTemplate.id)
-        let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
-
-        yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
-        yield put(hideLoader())
-    }
-    
-    catch (error) {
-        yield put(showAlert('Ошибка при получении данных'))
-        yield put(hideLoader())
-    }
+    yield put(showLoader())        
+    let exerciseTemplate = yield select(currentExerciseTemplate)        
+    let deleteExerciseTemplateResult = yield call(deleteExerciseTemplateFromApi, exerciseTemplate.id)
+    let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
+    yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
+    yield put(hideLoader())
 }
