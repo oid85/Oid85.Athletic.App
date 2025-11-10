@@ -2,6 +2,7 @@ import {
     SAGA_GET_EXERCISE_TEMPLATE_LIST,
     SAGA_CREATE_EXERCISE_TEMPLATE,
     SAGA_EDIT_EXERCISE_TEMPLATE,
+    SAGA_DELETE_EXERCISE_TEMPLATE,
     FETCH_GET_EXERCISE_TEMPLATE_LIST,
     FETCH_CURRENT_EXERCISE_TEMPLATE,
     SHOW_CREATE_EXERCISE_TEMPLATE_MODAL,
@@ -20,6 +21,12 @@ export const sagaGetExerciseTemplateList = () => {
 export const sagaCreateExerciseTemplate = () => {    
     return {
         type: SAGA_CREATE_EXERCISE_TEMPLATE
+    }
+}
+
+export const sagaDeleteExerciseTemplate = () => {    
+    return {
+        type: SAGA_DELETE_EXERCISE_TEMPLATE
     }
 }
 

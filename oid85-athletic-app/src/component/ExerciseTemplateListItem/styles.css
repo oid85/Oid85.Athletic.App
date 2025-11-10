@@ -54,6 +54,12 @@
     font-size: 10px;
 }
 
+.edit-exercise-template-modal-delete-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
 .edit-exercise-template-modal-cancel-button {
     width: 100px;
     margin: 5px;

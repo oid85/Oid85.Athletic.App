@@ -6,12 +6,14 @@ import {
 import {
     SAGA_GET_EXERCISE_TEMPLATE_LIST,
     SAGA_CREATE_EXERCISE_TEMPLATE,
-    SAGA_EDIT_EXERCISE_TEMPLATE
+    SAGA_EDIT_EXERCISE_TEMPLATE,
+    SAGA_DELETE_EXERCISE_TEMPLATE
 } from '../types/exerciseTemplateTypes'
 import {
     getExerciseTemplateListFromApi,
     createExerciseTemplateFromApi,
-    editExerciseTemplateFromApi
+    editExerciseTemplateFromApi,
+    deleteExerciseTemplateFromApi
 } from '../api/exerciseTemplateApi'
 
 const currentExerciseTemplate = (state) => state.exerciseTemplate.currentExerciseTemplate
@@ -21,6 +23,7 @@ export function* sagaWatcherExerciseTemplate() {
     yield takeEvery(SAGA_GET_EXERCISE_TEMPLATE_LIST, sagaWorkerGetExerciseTemplateList)
     yield takeEvery(SAGA_CREATE_EXERCISE_TEMPLATE, sagaWorkerCreateExerciseTemplate)
     yield takeEvery(SAGA_EDIT_EXERCISE_TEMPLATE, sagaWorkerEditExerciseTemplate)
+    yield takeEvery(SAGA_DELETE_EXERCISE_TEMPLATE, sagaWorkerDeleteExerciseTemplate)
 }
 
 // SagaWorker'ы
@@ -66,6 +69,25 @@ function* sagaWorkerEditExerciseTemplate() {
         let exerciseTemplate = yield select(currentExerciseTemplate)        
 
         let editExerciseTemplateResult = yield call(editExerciseTemplateFromApi, exerciseTemplate.id, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
+        let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
+
+        yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
+        yield put(hideLoader())
+    }
+    
+    catch (error) {
+        yield put(showAlert('Ошибка при получении данных'))
+        yield put(hideLoader())
+    }
+}
+
+function* sagaWorkerDeleteExerciseTemplate() {    
+    try {
+        yield put(showLoader())
+        
+        let exerciseTemplate = yield select(currentExerciseTemplate)        
+
+        let deleteExerciseTemplateResult = yield call(deleteExerciseTemplateFromApi, exerciseTemplate.id)
         let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
 
         yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))

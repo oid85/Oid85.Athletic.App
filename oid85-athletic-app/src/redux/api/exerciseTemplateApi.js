@@ -58,3 +58,21 @@ export const editExerciseTemplateFromApi = async (id, name, equipment, muscles) 
         return await response.json()
     }
 }
+
+export const deleteExerciseTemplateFromApi = async (id) => {
+    const response = await fetch(
+        `${CONSTANTS.FINMARKET_API}/api/exercise-templates/delete`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: id
+            })
+        })
+
+    if (response.ok) {
+        return await response.json()
+    }
+}

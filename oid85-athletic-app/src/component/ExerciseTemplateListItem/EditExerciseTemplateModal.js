@@ -4,7 +4,8 @@ import Modal from 'react-modal';
 import { 
     hideEditExerciseTemplateModal, 
     fetchCurrentExerciseTemplate,
-    sagaEditExerciseTemplate 
+    sagaEditExerciseTemplate,
+    sagaDeleteExerciseTemplate 
 } from '../../redux/actions/exerciseTemplateActions'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
@@ -64,6 +65,12 @@ export const EditExerciseTemplateModal = () => {
                                     dispatch(sagaEditExerciseTemplate())
                                     dispatch(hideEditExerciseTemplateModal())
                                     } }>Сохранить</button>
+                        <button 
+                            className='btn btn-outline-primary edit-exercise-template-modal-delete-button' 
+                            onClick={ () => {
+                                    dispatch(sagaDeleteExerciseTemplate())
+                                    dispatch(hideEditExerciseTemplateModal())
+                                    } }>Удалить</button>                                    
                         <button 
                             className='btn btn-outline-primary edit-exercise-template-modal-cancel-button' 
                             onClick={ () => { 
