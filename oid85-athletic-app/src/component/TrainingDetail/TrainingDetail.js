@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import './styles.css'
 
-export const Training = () => {
+export const TrainingDetail = () => {
     
     return (
-        <div className='training'></div>
+        <div className='training-detail'></div>
     )
 }

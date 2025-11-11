@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import 'react-tabs/style/react-tabs.css'
 import { Alert } from '../Alert/Alert'
 import {ExerciseTemplateList} from "../ExerciseTemplateList/ExerciseTemplateList"
-import {Training} from "../Training/Training"
+import {TrainingDetail} from "../TrainingDetail/TrainingDetail"
 import {TrainingList} from "../TrainingList/TrainingList"
 import {Plan} from "../Plan/Plan"
 import './styles.css'
@@ -17,7 +17,7 @@ export const MainScreen = () => {
             <div>
                 <div className='horizontal-container'>
                     <ExerciseTemplateList />
-                    <Training />
+                    <TrainingDetail />
                     <TrainingList />
                 </div>
                 <div>
