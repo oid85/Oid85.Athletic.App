@@ -1,10 +1,19 @@
-.training-list-item-container {
+.exercise-template-list {
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    height: 650px;
+    width: 25%;
+    margin: 1px;
+    overflow-y: scroll;
+}
+
+.exercise-template-list-item-container {
     flex: 1;
     display: flex;
     flex-direction: row;    
 }
 
-.training-list-item {
+.exercise-template-list-item {
     border: 1px solid #C0C0C0;
     border-radius: 5px;
     text-align: left;    
@@ -16,57 +25,57 @@
 }
 
 /*Create modal*/
-.create-training-list-item-button {
+.create-exercise-template-list-item-button {
     height: 50px;
     width: 452px;
     margin: 1px;
     font-size: 10px;
 }
 
-.create-training-modal-save-button {
+.create-exercise-template-modal-save-button {
     width: 100px;
     margin: 5px;
     font-size: 10px;
 }
 
-.create-training-modal-cancel-button {
+.create-exercise-template-modal-cancel-button {
     width: 100px;
     margin: 5px;
     font-size: 10px;
 }
 
-.create-training-modal-input {
+.create-exercise-template-modal-input {
     margin: 5px;
     font-size: 10px;
 }
 
 /*Edit modal*/
-.edit-training-list-item-button {
+.edit-exercise-template-list-item-button {
     width: 50px;
     height: 50px;
     margin: 1px;
     font-size: 6px;
 }
 
-.edit-training-modal-save-button {
+.edit-exercise-template-modal-save-button {
     width: 100px;
     margin: 5px;
     font-size: 10px;
 }
 
-.edit-training-modal-delete-button {
+.edit-exercise-template-modal-delete-button {
     width: 100px;
     margin: 5px;
     font-size: 10px;
 }
 
-.edit-training-modal-cancel-button {
+.edit-exercise-template-modal-cancel-button {
     width: 100px;
     margin: 5px;
     font-size: 10px;
 }
 
-.edit-training-modal-input {
+.edit-exercise-template-modal-input {
     margin: 5px;
     font-size: 10px;
 }
