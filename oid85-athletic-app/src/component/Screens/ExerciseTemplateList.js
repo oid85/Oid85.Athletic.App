@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import { sagaGetExerciseTemplateList } from '../../redux/actions/exerciseTemplateActions'
+import {sagaGetExerciseTemplateList} from '../../redux/actions/exerciseTemplateActions'
 import Loader from '../Loader/Loader'
-import { ExerciseTemplateListItem } from '../ExerciseTemplateListItem/ExerciseTemplateListItem'
-import { CreateExerciseTemplateListItemButton } from '../ExerciseTemplateListItem/CreateExerciseTemplateListItemButton'
+import {ExerciseTemplateListItem} from '../ExerciseTemplateListItem/ExerciseTemplateListItem'
+import {CreateExerciseTemplateListItemButton} from '../ExerciseTemplateListItem/CreateExerciseTemplateListItemButton'
 import {CreateExerciseTemplateModal} from '../../component/ExerciseTemplateListItem/CreateExerciseTemplateModal'
 import {EditExerciseTemplateModal} from '../../component/ExerciseTemplateListItem/EditExerciseTemplateModal'
 import './styles.css'
@@ -23,7 +23,7 @@ export const ExerciseTemplateList = () => {
         {
             !exerciseTemplateList.result || loading
             ? <Loader/>
-            : 
+            :
             <div className='exercise-template-list'>
                 <CreateExerciseTemplateListItemButton />
                 {
@@ -32,8 +32,8 @@ export const ExerciseTemplateList = () => {
                     ))
                 }
                 <CreateExerciseTemplateModal />
-                <EditExerciseTemplateModal />
-            </div>            
+                <EditExerciseTemplateModal /> 
+            </div>          
         }
         </React.Fragment>                
     )

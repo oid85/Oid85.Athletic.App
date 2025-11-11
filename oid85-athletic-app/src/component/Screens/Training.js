@@ -4,6 +4,6 @@ import './styles.css'
 export const Training = () => {
     
     return (
-        <div className='traning'></div>
+        <div className='training'></div>
     )
 }

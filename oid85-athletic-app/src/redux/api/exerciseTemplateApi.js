@@ -1,78 +1,19 @@
-﻿import {CONSTANTS} from "../../constants"
+﻿import {sendPostRequest} from './api'
+
+const controller = 'exercise-templates'
 
 export const getExerciseTemplateListFromApi = async () => {
-    const response = await fetch(
-        `${CONSTANTS.FINMARKET_API}/api/exercise-templates/list`, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                equipment: ''
-            })
-        })
-
-    if (response.ok) {
-        return await response.json()
-    }
+    return sendPostRequest(`${controller}/list`, {})
 }
 
 export const createExerciseTemplateFromApi = async (name, equipment, muscles) => {
-    const response = await fetch(
-        `${CONSTANTS.FINMARKET_API}/api/exercise-templates/create`, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: name,
-                equipment: equipment,
-                muscles: muscles
-            })
-        })
-
-    if (response.ok) {
-        return await response.json()
-    }
+    return sendPostRequest(`${controller}/create`, {name, equipment, muscles})
 }
 
 export const editExerciseTemplateFromApi = async (id, name, equipment, muscles) => {
-    const response = await fetch(
-        `${CONSTANTS.FINMARKET_API}/api/exercise-templates/edit`, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                id: id,
-                name: name,
-                equipment: equipment,
-                muscles: muscles
-            })
-        })
-
-    if (response.ok) {
-        return await response.json()
-    }
+    return sendPostRequest(`${controller}/edit`, {id, name, equipment, muscles})
 }
 
 export const deleteExerciseTemplateFromApi = async (id) => {
-    const response = await fetch(
-        `${CONSTANTS.FINMARKET_API}/api/exercise-templates/delete`, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                id: id
-            })
-        })
-
-    if (response.ok) {
-        return await response.json()
-    }
+    return sendPostRequest(`${controller}/delete`, {id})
 }

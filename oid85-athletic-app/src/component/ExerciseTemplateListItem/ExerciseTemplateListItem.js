@@ -11,12 +11,15 @@ export const ExerciseTemplateListItem = ({key, exerciseTemplate}) => {
     return (
         <React.Fragment>
             <div className='exercise-template-list-item-container'>
-                <div className='exercise-template-list-item' key={key}>{exerciseTemplate.name}</div>
+                <div 
+                    className='exercise-template-list-item' 
+                    key={key}
+                    onClick={() => {dispatch(fetchCurrentExerciseTemplate({...exerciseTemplate}))}}>{exerciseTemplate.name}</div>
                 <button 
-                className='btn btn-outline-primary edit-exercise-template-list-item-button'
-                onClick={() => {
-                    dispatch(fetchCurrentExerciseTemplate({...exerciseTemplate}))
-                    dispatch(showEditExerciseTemplateModal())}}>...</button>
+                    className='btn btn-outline-primary edit-exercise-template-list-item-button'
+                    onClick={() => {
+                        dispatch(fetchCurrentExerciseTemplate({...exerciseTemplate}))
+                        dispatch(showEditExerciseTemplateModal())}}>...</button>
             </div>
         </React.Fragment>
     )
