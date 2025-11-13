@@ -41,18 +41,18 @@ export const CreateTrainingModal = () => {
                             placeholder='Наименование' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentTraining({...currentTraining, name: event.target.value})) 
-                                } } />
+                                }} />
                         <button 
                             className='btn btn-outline-primary create-training-modal-save-button' 
                             onClick={ () => {
                                     dispatch(sagaCreateTraining())
                                     dispatch(hideCreateTrainingModal())
-                                    } }>Сохранить</button>
+                                    }}>Сохранить</button>
                         <button 
                             className='btn btn-outline-primary create-training-modal-cancel-button' 
                             onClick={ () => { 
                                 dispatch(hideCreateTrainingModal()) 
-                                } }>Закрыть</button>                        
+                                }}>Закрыть</button>                        
                     </form>
                 </Modal>
             </div>

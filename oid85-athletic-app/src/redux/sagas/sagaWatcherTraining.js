@@ -1,5 +1,4 @@
 import {call, put, select, takeEvery} from 'redux-saga/effects'
-import {hideLoader, showAlert, showLoader} from '../actions/appActions'
 import {
     fetchGetTrainingList
 } from '../actions/trainingActions'
@@ -18,7 +17,6 @@ import {
 
 const currentTraining = (state) => state.training.currentTraining
 
-// SagaWatcher'ы
 export function* sagaWatcherTraining() {
     yield takeEvery(SAGA_GET_TRAINING_LIST, sagaWorkerGetTrainingList)
     yield takeEvery(SAGA_CREATE_TRAINING, sagaWorkerCreateTraining)
@@ -26,37 +24,28 @@ export function* sagaWatcherTraining() {
     yield takeEvery(SAGA_DELETE_TRAINING, sagaWorkerDeleteTraining)
 }
 
-// SagaWorker'ы
 function* sagaWorkerGetTrainingList() {
-    yield put(showLoader())
     let getTrainingListResult = yield call(getTrainingListFromApi)    
     yield put(fetchGetTrainingList(getTrainingListResult))
-    yield put(hideLoader())
 }
 
-function* sagaWorkerCreateTraining() {    
-    yield put(showLoader())        
+function* sagaWorkerCreateTraining() {          
     let training = yield select(currentTraining)        
     yield call(createTrainingFromApi, training.name)
     let getTrainingListResult = yield call(getTrainingListFromApi)
     yield put(fetchGetTrainingList(getTrainingListResult))
-    yield put(hideLoader())
 }
 
-function* sagaWorkerEditTraining() {    
-    yield put(showLoader())        
+function* sagaWorkerEditTraining() {         
     let training = yield select(currentTraining)        
     yield call(editTrainingFromApi, training.id, training.name)
     let getTrainingListResult = yield call(getTrainingListFromApi)
     yield put(fetchGetTrainingList(getTrainingListResult))
-    yield put(hideLoader())
 }
 
-function* sagaWorkerDeleteTraining() {    
-    yield put(showLoader())        
+function* sagaWorkerDeleteTraining() {        
     let training = yield select(currentTraining)        
     yield call(deleteTrainingFromApi, training.id)
     let getTrainingListResult = yield call(getTrainingListFromApi)
     yield put(fetchGetTrainingList(getTrainingListResult))
-    yield put(hideLoader())
 }

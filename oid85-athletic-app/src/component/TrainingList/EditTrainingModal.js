@@ -42,24 +42,24 @@ export const EditTrainingModal = () => {
                             placeholder='Наименование' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentTraining({...currentTraining, name: event.target.value})) 
-                                } } />
+                                }} />
                         <button 
                             className='btn btn-outline-primary edit-training-modal-save-button' 
                             onClick={ () => {
                                     dispatch(sagaEditTraining())
                                     dispatch(hideEditTrainingModal())
-                                    } }>Сохранить</button>
+                                    }}>Сохранить</button>
                         <button 
                             className='btn btn-outline-primary edit-training-modal-delete-button' 
                             onClick={ () => {
                                     dispatch(sagaDeleteTraining())
                                     dispatch(hideEditTrainingModal())
-                                    } }>Удалить</button>                                    
+                                    }}>Удалить</button>                                    
                         <button 
                             className='btn btn-outline-primary edit-training-modal-cancel-button' 
                             onClick={ () => { 
                                 dispatch(hideEditTrainingModal()) 
-                                } }>Закрыть</button>                        
+                                }}>Закрыть</button>                        
                     </form>
                 </Modal>
             </div>

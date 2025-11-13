@@ -11,7 +11,7 @@ export const createTrainingFromApi = async (name) => {
 }
 
 export const editTrainingFromApi = async (id, name) => {
-    return sendPostRequest(`${controller}/edit`, {id, name})
+    return sendPostRequest(`${controller}/edit-name`, {id, name})
 }
 
 export const deleteTrainingFromApi = async (id) => {

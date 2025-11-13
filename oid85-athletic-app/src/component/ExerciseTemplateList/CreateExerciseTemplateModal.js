@@ -41,7 +41,7 @@ export const CreateExerciseTemplateModal = () => {
                             placeholder='Наименование' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, name: event.target.value})) 
-                                } } />
+                                }} />
                         <input 
                             className='form-control create-exercise-template-modal-input' 
                             type="text" 
@@ -49,7 +49,7 @@ export const CreateExerciseTemplateModal = () => {
                             placeholder='Оборудование' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, equipment: event.target.value})) 
-                                } } />
+                                }} />
                         <input 
                             className='form-control create-exercise-template-modal-input' 
                             type="text" 
@@ -57,18 +57,18 @@ export const CreateExerciseTemplateModal = () => {
                             placeholder='Группы мышц' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, muscles: event.target.value})) 
-                                } } />
+                                }} />
                         <button 
                             className='btn btn-outline-primary create-exercise-template-modal-save-button' 
                             onClick={ () => {
                                     dispatch(sagaCreateExerciseTemplate())
                                     dispatch(hideCreateExerciseTemplateModal())
-                                    } }>Сохранить</button>
+                                    }}>Сохранить</button>
                         <button 
                             className='btn btn-outline-primary create-exercise-template-modal-cancel-button' 
                             onClick={ () => { 
                                 dispatch(hideCreateExerciseTemplateModal()) 
-                                } }>Закрыть</button>                        
+                                }}>Закрыть</button>                        
                     </form>
                 </Modal>
             </div>

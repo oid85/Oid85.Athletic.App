@@ -9,6 +9,7 @@ import reportWebVitals from './reportWebVitals'
 import { rootReducer } from './redux/reducers/rootReducer'
 import { sagaWatcherExerciseTemplate } from './redux/sagas/sagaWatcherExerciseTemplate'
 import { sagaWatcherTraining } from './redux/sagas/sagaWatcherTraining'
+import { sagaWatcherTrainingDetail } from './redux/sagas/sagaWatcherTrainingDetail'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const saga = createSagaMiddleware()
@@ -20,6 +21,7 @@ const store = createStore(rootReducer, undefined, composedEnhancers)
 
 saga.run(sagaWatcherExerciseTemplate)
 saga.run(sagaWatcherTraining)
+saga.run(sagaWatcherTrainingDetail)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 

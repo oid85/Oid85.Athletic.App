@@ -42,7 +42,7 @@ export const EditExerciseTemplateModal = () => {
                             placeholder='Наименование' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, name: event.target.value})) 
-                                } } />
+                                }} />
                         <input 
                             className='form-control edit-exercise-template-modal-input' 
                             type="text" 
@@ -50,7 +50,7 @@ export const EditExerciseTemplateModal = () => {
                             placeholder='Оборудование' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, equipment: event.target.value})) 
-                                } } />
+                                }} />
                         <input 
                             className='form-control edit-exercise-template-modal-input' 
                             type="text" 
@@ -58,24 +58,29 @@ export const EditExerciseTemplateModal = () => {
                             placeholder='Группы мышц' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, muscles: event.target.value})) 
-                                } } />
+                                }} />
                         <button 
                             className='btn btn-outline-primary edit-exercise-template-modal-save-button' 
                             onClick={ () => {
                                     dispatch(sagaEditExerciseTemplate())
                                     dispatch(hideEditExerciseTemplateModal())
-                                    } }>Сохранить</button>
+                                    }}>Сохранить</button>
+                        <button 
+                            className='btn btn-outline-primary edit-exercise-template-modal-add-button' 
+                            onClick={ () => {
+                                    dispatch(hideEditExerciseTemplateModal())
+                                    }}>Добавить</button>                                    
                         <button 
                             className='btn btn-outline-primary edit-exercise-template-modal-delete-button' 
                             onClick={ () => {
                                     dispatch(sagaDeleteExerciseTemplate())
                                     dispatch(hideEditExerciseTemplateModal())
-                                    } }>Удалить</button>                                    
+                                    }}>Удалить</button>                                    
                         <button 
                             className='btn btn-outline-primary edit-exercise-template-modal-cancel-button' 
                             onClick={ () => { 
                                 dispatch(hideEditExerciseTemplateModal()) 
-                                } }>Закрыть</button>                        
+                                }}>Закрыть</button>                        
                     </form>
                 </Modal>
             </div>

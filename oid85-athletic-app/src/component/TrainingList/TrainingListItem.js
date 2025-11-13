@@ -10,16 +10,19 @@ export const TrainingListItem = ({key, training}) => {
 
     return (
         <React.Fragment>
-            <div className='training-list-item-container'>
+            <div className='training-list-item'>
                 <div 
-                    className='training-list-item' 
+                    className='training-list-item-name' 
                     key={key}
-                    onClick={() => {dispatch(fetchCurrentTraining({...training}))}}>{training.name}</div>
-                <button 
-                    className='btn btn-outline-primary edit-training-list-item-button'
                     onClick={() => {
                         dispatch(fetchCurrentTraining({...training}))
-                        dispatch(showEditTrainingModal())}}>...</button>
+                        }}>{training.name}</div>
+                <button 
+                    className='btn btn-outline-link training-list-item-button'
+                    onClick={() => {
+                        dispatch(fetchCurrentTraining({...training}))
+                        dispatch(showEditTrainingModal())
+                        }}>...</button>
             </div>
         </React.Fragment>
     )
