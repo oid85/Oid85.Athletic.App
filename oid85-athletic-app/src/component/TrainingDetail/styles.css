@@ -9,13 +9,14 @@
 
 .training-detail-title {
     text-align: center;
-    font-size: 38px;
+    font-size: 32px;
 }
 
 .training-detail-exercise-list-item {
     flex: 1;
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
+    margin: 5px;
 }
 
 .training-detail-exercise-list-item-order {
@@ -51,6 +52,7 @@
     flex: 1;
     display: flex;
     flex-direction: row; 
+    margin: 5px;
 }
 
 .training-detail-cycles-value {
@@ -66,6 +68,7 @@
     flex: 1;
     display: flex;
     flex-direction: row; 
+    margin: 5px;
 }
 
 .training-detail-start-cardio-minutes-value {
@@ -81,6 +84,7 @@
     flex: 1;
     display: flex;
     flex-direction: row; 
+    margin: 5px;
 }
 
 .training-detail-finish-cardio-minutes-value {
