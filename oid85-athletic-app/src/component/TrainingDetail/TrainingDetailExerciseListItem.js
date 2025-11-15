@@ -1,5 +1,6 @@
 import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
+import {fetchCurrentExercise, showEditExerciseModal} from '../../redux/actions/exerciseActions'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 
@@ -40,7 +41,8 @@ export const TrainingDetailExerciseListItem = ({key, exercise}) => {
                 <button 
                     className='btn btn-outline-link training-detail-exercise-list-item-button'
                     onClick={() => {
-
+                        dispatch(fetchCurrentExercise({...exercise}))
+                        dispatch(showEditExerciseModal())
                         }}>...</button>
             </div>
         </React.Fragment>

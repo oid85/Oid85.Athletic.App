@@ -8,6 +8,7 @@ import { TrainingDetailExerciseList } from './TrainingDetailExerciseList'
 import { TrainingDetailStartCardioMinutes } from './TrainingDetailStartCardioMinutes'
 import { TrainingDetailFinishCardioMinutes } from './TrainingDetailFinishCardioMinutes'
 import { TrainingDetailCycles } from './TrainingDetailCycles'
+import { EditTrainingDetailExerciseModal } from './EditTrainingDetailExerciseModal'
 
 export const TrainingDetail = () => {
   
@@ -38,6 +39,7 @@ export const TrainingDetail = () => {
                 <TrainingDetailExerciseList exercises = {training.exercises} />
                 <TrainingDetailFinishCardioMinutes finishCardioMinutes = {training.finishCardioMinutes} />
                 <TrainingDetailCycles cycles = {training.cycles} />
+                <EditTrainingDetailExerciseModal />
             </div>          
         }
         </React.Fragment>  

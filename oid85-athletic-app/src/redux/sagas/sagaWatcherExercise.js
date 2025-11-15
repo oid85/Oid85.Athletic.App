@@ -30,16 +30,18 @@ function* sagaWorkerCreateExercise() {
     yield put(fetchTrainingDetail(getTrainingDetailResult))
 }
 
-function* sagaWorkerEditExercise() {          
+function* sagaWorkerEditExercise() {  
+    let training = yield select(currentTraining)        
     let exercise = yield select(currentExercise)        
     yield call(editExerciseFromApi, exercise.id, exercise.order, exercise.weight, exercise.countIterations, exercise.minutes)
-    let getTrainingDetailResult = yield call(getTrainingDetailFromApi, exercise.trainingId)
+    let getTrainingDetailResult = yield call(getTrainingDetailFromApi, training.id)
     yield put(fetchTrainingDetail(getTrainingDetailResult))
 }
 
-function* sagaWorkerDeleteExercise() {          
+function* sagaWorkerDeleteExercise() {         
+    let training = yield select(currentTraining) 
     let exercise = yield select(currentExercise)        
     yield call(deleteExerciseFromApi, exercise.id)
-    let getTrainingDetailResult = yield call(getTrainingDetailFromApi, exercise.trainingId)
+    let getTrainingDetailResult = yield call(getTrainingDetailFromApi, training.id)
     yield put(fetchTrainingDetail(getTrainingDetailResult))
 }

@@ -95,3 +95,27 @@
 .training-detail-finish-cardio-minutes-button {
     width: 20px;
 }
+
+/*Edit modal*/
+.edit-training-detail-exercise-modal-save-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-training-detail-exercise-modal-delete-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-training-detail-exercise-modal-cancel-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-training-detail-exercise-modal-input {
+    margin: 5px;
+    font-size: 10px;
+}

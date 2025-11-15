@@ -34,6 +34,7 @@ export const CreateExerciseTemplateModal = () => {
                     style={customStyles}>
                     <h6>Создать упражнение</h6>
                     <form>
+                        <label>Наименование</label>
                         <input 
                             className='form-control create-exercise-template-modal-input' 
                             type="text" 
@@ -42,6 +43,7 @@ export const CreateExerciseTemplateModal = () => {
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, name: event.target.value})) 
                                 }} />
+                        <label>Оборудование</label>
                         <input 
                             className='form-control create-exercise-template-modal-input' 
                             type="text" 
@@ -50,6 +52,7 @@ export const CreateExerciseTemplateModal = () => {
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, equipment: event.target.value})) 
                                 }} />
+                        <label>Группы мышц</label>
                         <input 
                             className='form-control create-exercise-template-modal-input' 
                             type="text" 
