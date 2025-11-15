@@ -16,7 +16,7 @@ export const TrainingListItem = ({key, training}) => {
                     key={key}
                     onClick={() => {
                         dispatch(fetchCurrentTraining({...training}))
-                        }}>{training.name}</div>
+                        }}>{`${training.name} ${training.totalCountIterations} повт. ${training.totalWeight} кг`}</div>
                 <button 
                     className='btn btn-outline-link training-list-item-button'
                     onClick={() => {

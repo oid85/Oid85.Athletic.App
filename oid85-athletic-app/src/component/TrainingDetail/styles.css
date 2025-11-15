@@ -10,6 +10,12 @@
 .training-detail-title {
     text-align: center;
     font-size: 32px;
+    margin: 5px;
+}
+
+.training-detail-intensity {
+    font-size: 20px;
+    margin: 5px;
 }
 
 .training-detail-exercise-list-item {

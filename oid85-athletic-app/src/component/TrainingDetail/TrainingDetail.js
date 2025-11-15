@@ -9,6 +9,7 @@ import { TrainingDetailStartCardioMinutes } from './TrainingDetailStartCardioMin
 import { TrainingDetailFinishCardioMinutes } from './TrainingDetailFinishCardioMinutes'
 import { TrainingDetailCycles } from './TrainingDetailCycles'
 import { EditTrainingDetailExerciseModal } from './EditTrainingDetailExerciseModal'
+import { TrainingDetailIntensity } from './TrainingDetailIntensity'
 
 export const TrainingDetail = () => {
   
@@ -25,7 +26,7 @@ export const TrainingDetail = () => {
         dispatch(sagaTrainingDetail())
     }, [currentTraining.id])
 
-    let training = {...{...trainingDetail.result}.training}
+    let training = {...{...trainingDetail.result}.training}    
 
     return (
         <React.Fragment>
@@ -35,6 +36,7 @@ export const TrainingDetail = () => {
             : 
             <div className='training-detail'>
                 <TrainingDetailTitle title = {training.name} />
+                <TrainingDetailIntensity totalCountIterations = {training.totalCountIterations} totalWeight = {training.totalWeight} />
                 <TrainingDetailStartCardioMinutes startCardioMinutes = {training.startCardioMinutes} />
                 <TrainingDetailExerciseList exercises = {training.exercises} />
                 <TrainingDetailFinishCardioMinutes finishCardioMinutes = {training.finishCardioMinutes} />
