@@ -1,17 +1,15 @@
 import {call, put, select, takeEvery} from 'redux-saga/effects'
+import {fetchGetTrainingList} from '../actions/trainingActions'
 import {
-    fetchGetTrainingList
-} from '../actions/trainingActions'
-import {
-    SAGA_GET_TRAINING_LIST,
-    SAGA_CREATE_TRAINING,
-    SAGA_EDIT_TRAINING,
+    SAGA_GET_TRAINING_LIST, 
+    SAGA_CREATE_TRAINING, 
+    SAGA_EDIT_TRAINING, 
     SAGA_DELETE_TRAINING
 } from '../types/trainingTypes'
 import {
-    getTrainingListFromApi,
-    createTrainingFromApi,
-    editTrainingFromApi,
+    getTrainingListFromApi, 
+    createTrainingFromApi, 
+    editTrainingFromApi, 
     deleteTrainingFromApi
 } from '../api/trainingApi'
 

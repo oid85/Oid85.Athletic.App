@@ -8,6 +8,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { rootReducer } from './redux/reducers/rootReducer'
 import { sagaWatcherExerciseTemplate } from './redux/sagas/sagaWatcherExerciseTemplate'
+import { sagaWatcherExercise } from './redux/sagas/sagaWatcherExercise'
 import { sagaWatcherTraining } from './redux/sagas/sagaWatcherTraining'
 import { sagaWatcherTrainingDetail } from './redux/sagas/sagaWatcherTrainingDetail'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -19,6 +20,7 @@ const composedEnhancers = compose(middlewareEnhancer)
 
 const store = createStore(rootReducer, undefined, composedEnhancers)
 
+saga.run(sagaWatcherExercise)
 saga.run(sagaWatcherExerciseTemplate)
 saga.run(sagaWatcherTraining)
 saga.run(sagaWatcherTrainingDetail)

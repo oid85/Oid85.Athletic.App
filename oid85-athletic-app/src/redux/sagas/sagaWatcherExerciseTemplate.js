@@ -1,11 +1,9 @@
 import {call, put, select, takeEvery} from 'redux-saga/effects'
+import {fetchGetExerciseTemplateList} from '../actions/exerciseTemplateActions'
 import {
-    fetchGetExerciseTemplateList
-} from '../actions/exerciseTemplateActions'
-import {
-    SAGA_GET_EXERCISE_TEMPLATE_LIST,
-    SAGA_CREATE_EXERCISE_TEMPLATE,
-    SAGA_EDIT_EXERCISE_TEMPLATE,
+    SAGA_GET_EXERCISE_TEMPLATE_LIST, 
+    SAGA_CREATE_EXERCISE_TEMPLATE, 
+    SAGA_EDIT_EXERCISE_TEMPLATE, 
     SAGA_DELETE_EXERCISE_TEMPLATE
 } from '../types/exerciseTemplateTypes'
 import {
