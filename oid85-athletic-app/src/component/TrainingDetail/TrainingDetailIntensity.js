@@ -9,7 +9,7 @@ export const TrainingDetailIntensity = ({totalCountIterations, totalWeight}) => 
                 ? <div className='training-detail-intensity'></div>
                 :
                 <div className='training-detail-intensity'>
-                {`Интенсивность: ${totalCountIterations} повт.  ${totalWeight} кг`}
+                {`Интенсивность: x${totalCountIterations}/${totalWeight} кг`}
             </div>                                        
             }                   
         </React.Fragment>  

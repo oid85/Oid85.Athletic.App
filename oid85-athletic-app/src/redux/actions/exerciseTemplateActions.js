@@ -1,9 +1,9 @@
 import {
-    SAGA_GET_EXERCISE_TEMPLATE_LIST,
+    SAGA_EXERCISE_TEMPLATE_LIST,
     SAGA_CREATE_EXERCISE_TEMPLATE,
     SAGA_EDIT_EXERCISE_TEMPLATE,
     SAGA_DELETE_EXERCISE_TEMPLATE,
-    FETCH_GET_EXERCISE_TEMPLATE_LIST,
+    FETCH_EXERCISE_TEMPLATE_LIST,
     FETCH_CURRENT_EXERCISE_TEMPLATE,
     SHOW_CREATE_EXERCISE_TEMPLATE_MODAL,
     HIDE_CREATE_EXERCISE_TEMPLATE_MODAL,
@@ -14,7 +14,7 @@ import {
 
 export const sagaGetExerciseTemplateList = () => {
     return {
-        type: SAGA_GET_EXERCISE_TEMPLATE_LIST
+        type: SAGA_EXERCISE_TEMPLATE_LIST
     }
 }
 
@@ -38,7 +38,7 @@ export const sagaEditExerciseTemplate = () => {
 
 export const fetchGetExerciseTemplateList = (data) => {
     return {
-        type: FETCH_GET_EXERCISE_TEMPLATE_LIST,
+        type: FETCH_EXERCISE_TEMPLATE_LIST,
         payload: data
     }
 }

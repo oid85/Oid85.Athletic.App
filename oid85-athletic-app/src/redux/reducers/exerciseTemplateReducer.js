@@ -1,5 +1,5 @@
 import {
-    FETCH_GET_EXERCISE_TEMPLATE_LIST,
+    FETCH_EXERCISE_TEMPLATE_LIST,
     FETCH_CURRENT_EXERCISE_TEMPLATE,
     SHOW_CREATE_EXERCISE_TEMPLATE_MODAL,
     HIDE_CREATE_EXERCISE_TEMPLATE_MODAL,
@@ -17,7 +17,7 @@ const initialState = {
 export const exerciseTemplateReducer = (state = initialState, action) => {
     switch (action.type) {
 
-        case FETCH_GET_EXERCISE_TEMPLATE_LIST:
+        case FETCH_EXERCISE_TEMPLATE_LIST:
             return {...state, exerciseTemplateList: {...action.payload}}
 
         case FETCH_CURRENT_EXERCISE_TEMPLATE:

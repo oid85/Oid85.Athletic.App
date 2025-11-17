@@ -1,7 +1,7 @@
 import {call, put, select, takeEvery} from 'redux-saga/effects'
 import {fetchGetExerciseTemplateList} from '../actions/exerciseTemplateActions'
 import {
-    SAGA_GET_EXERCISE_TEMPLATE_LIST, 
+    SAGA_EXERCISE_TEMPLATE_LIST, 
     SAGA_CREATE_EXERCISE_TEMPLATE, 
     SAGA_EDIT_EXERCISE_TEMPLATE, 
     SAGA_DELETE_EXERCISE_TEMPLATE
@@ -16,7 +16,7 @@ import {
 const currentExerciseTemplate = (state) => state.exerciseTemplate.currentExerciseTemplate
 
 export function* sagaWatcherExerciseTemplate() {
-    yield takeEvery(SAGA_GET_EXERCISE_TEMPLATE_LIST, sagaWorkerGetExerciseTemplateList)
+    yield takeEvery(SAGA_EXERCISE_TEMPLATE_LIST, sagaWorkerGetExerciseTemplateList)
     yield takeEvery(SAGA_CREATE_EXERCISE_TEMPLATE, sagaWorkerCreateExerciseTemplate)
     yield takeEvery(SAGA_EDIT_EXERCISE_TEMPLATE, sagaWorkerEditExerciseTemplate)
     yield takeEvery(SAGA_DELETE_EXERCISE_TEMPLATE, sagaWorkerDeleteExerciseTemplate)
