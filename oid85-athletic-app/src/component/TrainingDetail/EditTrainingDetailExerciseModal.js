@@ -7,9 +7,6 @@ import {
     sagaEditExercise,
     sagaDeleteExercise 
 } from '../../redux/actions/exerciseActions'
-import { 
-    sagaCreateExercise
-} from '../../redux/actions/exerciseActions'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 

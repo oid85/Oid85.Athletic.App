@@ -1,7 +1,12 @@
 import React from 'react'
+import {useDispatch, useSelector} from 'react-redux'
+import { showEditTrainingDetailStartCardioMinutesModal } from '../../redux/actions/trainingDetailActions'
 import './styles.css'
 
 export const TrainingDetailStartCardioMinutes = ({startCardioMinutes}) => {
+
+    const dispatch = useDispatch()
+
     return (
         <React.Fragment>
             {
@@ -13,7 +18,7 @@ export const TrainingDetailStartCardioMinutes = ({startCardioMinutes}) => {
                     <button 
                         className='btn btn-outline-link training-detail-start-cardio-minutes-button'
                         onClick={() => {
-
+                            dispatch(showEditTrainingDetailStartCardioMinutesModal())
                     }}>...</button>                        
                 </div>                                       
             }

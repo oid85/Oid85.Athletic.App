@@ -125,3 +125,57 @@
     margin: 5px;
     font-size: 10px;
 }
+
+/*Edit cycles modal*/
+.edit-training-detail-cycles-modal-save-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-training-detail-cycles-modal-cancel-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-training-detail-cycles-modal-input {
+    margin: 5px;
+    font-size: 10px;
+}
+
+/*Edit start-cardio-minutes modal*/
+.edit-training-detail-start-cardio-minutes-modal-save-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-training-detail-start-cardio-minutes-modal-cancel-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-training-detail-start-cardio-minutes-modal-input {
+    margin: 5px;
+    font-size: 10px;
+}
+
+/*Edit finish-cardio-minutes modal*/
+.edit-training-detail-finish-cardio-minutes-modal-save-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-training-detail-finish-cardio-minutes-modal-cancel-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.edit-training-detail-finish-cardio-minutes-modal-input {
+    margin: 5px;
+    font-size: 10px;
+}

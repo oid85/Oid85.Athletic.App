@@ -1,7 +1,12 @@
 import React from 'react'
+import {useDispatch, useSelector} from 'react-redux'
+import { showEditTrainingDetailCyclesModal } from '../../redux/actions/trainingDetailActions'
 import './styles.css'
 
 export const TrainingDetailCycles = ({cycles}) => {
+
+    const dispatch = useDispatch()
+
     return (
         <React.Fragment>
             {
@@ -13,7 +18,7 @@ export const TrainingDetailCycles = ({cycles}) => {
                     <button 
                         className='btn btn-outline-link training-detail-cycles-button'
                         onClick={() => {
-
+                            dispatch(showEditTrainingDetailCyclesModal())
                     }}>...</button>                        
                 </div>                                        
             }      

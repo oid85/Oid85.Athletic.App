@@ -10,6 +10,9 @@ import { TrainingDetailFinishCardioMinutes } from './TrainingDetailFinishCardioM
 import { TrainingDetailCycles } from './TrainingDetailCycles'
 import { EditTrainingDetailExerciseModal } from './EditTrainingDetailExerciseModal'
 import { TrainingDetailIntensity } from './TrainingDetailIntensity'
+import { EditTrainingDetailCyclesModal } from './EditTrainingDetailCyclesModal'
+import { EditTrainingDetailStartCardioMinutesModal } from './EditTrainingDetailStartCardioMinutesModal'
+import { EditTrainingDetailFinishCardioMinutesModal } from './EditTrainingDetailFinishCardioMinutesModal'
 
 export const TrainingDetail = () => {
   
@@ -26,22 +29,23 @@ export const TrainingDetail = () => {
         dispatch(sagaTrainingDetail())
     }, [currentTraining.id])
 
-    let training = {...{...trainingDetail.result}.training}    
-
     return (
         <React.Fragment>
         {
-            !trainingDetail.result || loading
+            !trainingDetail || loading
             ? <Loader/>
             : 
             <div className='training-detail'>
-                <TrainingDetailTitle title = {training.name} />
-                <TrainingDetailIntensity totalCountIterations = {training.totalCountIterations} totalWeight = {training.totalWeight} />
-                <TrainingDetailStartCardioMinutes startCardioMinutes = {training.startCardioMinutes} />
-                <TrainingDetailExerciseList exercises = {training.exercises} />
-                <TrainingDetailFinishCardioMinutes finishCardioMinutes = {training.finishCardioMinutes} />
-                <TrainingDetailCycles cycles = {training.cycles} />
+                <TrainingDetailTitle title = {trainingDetail.name} />
+                <TrainingDetailIntensity totalCountIterations = {trainingDetail.totalCountIterations} totalWeight = {trainingDetail.totalWeight} />
+                <TrainingDetailStartCardioMinutes startCardioMinutes = {trainingDetail.startCardioMinutes} />
+                <TrainingDetailExerciseList exercises = {trainingDetail.exercises} />
+                <TrainingDetailFinishCardioMinutes finishCardioMinutes = {trainingDetail.finishCardioMinutes} />
+                <TrainingDetailCycles cycles = {trainingDetail.cycles} />
                 <EditTrainingDetailExerciseModal />
+                <EditTrainingDetailCyclesModal />
+                <EditTrainingDetailStartCardioMinutesModal />
+                <EditTrainingDetailFinishCardioMinutesModal />
             </div>          
         }
         </React.Fragment>  
