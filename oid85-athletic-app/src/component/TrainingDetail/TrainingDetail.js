@@ -13,6 +13,7 @@ import { TrainingDetailIntensity } from './TrainingDetailIntensity'
 import { EditTrainingDetailCyclesModal } from './EditTrainingDetailCyclesModal'
 import { EditTrainingDetailStartCardioMinutesModal } from './EditTrainingDetailStartCardioMinutesModal'
 import { EditTrainingDetailFinishCardioMinutesModal } from './EditTrainingDetailFinishCardioMinutesModal'
+import { TrainingDetailPlanButton } from './TrainingDetailPlanButton'
 
 export const TrainingDetail = () => {
   
@@ -36,6 +37,7 @@ export const TrainingDetail = () => {
             ? <Loader/>
             : 
             <div className='training-detail'>
+                <TrainingDetailPlanButton />
                 <TrainingDetailTitle title = {trainingDetail.name} />
                 <TrainingDetailIntensity totalCountIterations = {trainingDetail.totalCountIterations} totalWeight = {trainingDetail.totalWeight} />
                 <TrainingDetailStartCardioMinutes startCardioMinutes = {trainingDetail.startCardioMinutes} />
