@@ -18,6 +18,18 @@
     margin: 5px;
 }
 
+.training-detail-intensity-low { 
+    background-color: #FFFFE0; 
+}
+
+.training-detail-intensity-middle { 
+    background-color: #FFA07A; 
+}
+
+.training-detail-intensity-high { 
+    background-color: #FF7F50; 
+}
+
 .training-detail-exercise-list-item {
     flex: 1;
     display: flex;

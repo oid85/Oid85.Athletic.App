@@ -1,8 +1,12 @@
 import React from 'react'
+import {useDispatch, useSelector} from 'react-redux'
+import {fetchCurrentTraining} from '../../redux/actions/trainingActions'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 
 export const PlanListItemTraining = ({training}) => {
+
+    const dispatch = useDispatch()
 
     let className = 'plan-list-item-training'
 
@@ -13,7 +17,11 @@ export const PlanListItemTraining = ({training}) => {
 
     return (
         <React.Fragment>
-            <div className={className}>
+            <div 
+                className={className}
+                onClick={() => {
+                    dispatch(fetchCurrentTraining({...training}))
+                    }}>
                 {
                     !training.name ? <div></div> :
                     <div>

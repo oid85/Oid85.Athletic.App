@@ -12,11 +12,18 @@ export const TrainingDetailPlanButton = () => {
                 !currentTraining.id
                 ? <div></div>
                 :                 
-                <button 
-                    className='btn btn-outline-link'
-                    onClick={() => {
-                    
-                }}>Запланировать</button> 
+                <div>
+                    <button 
+                        className='btn btn-outline-link'
+                        onClick={() => {
+                        
+                    }}>Добавить в план</button>
+                    <button 
+                        className='btn btn-outline-link'
+                        onClick={() => {
+                        
+                    }}>Убрать из плана</button>                    
+                </div>                
             }                     
         </React.Fragment>  
     )
