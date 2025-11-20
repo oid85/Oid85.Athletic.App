@@ -12,6 +12,8 @@ import {
     editTrainingDetailStartCardioMinutesFromApi,
     editTrainingDetailFinishCardioMinutesFromApi
 } from '../api/trainingDetailApi'
+import { getTrainingListFromApi } from '../api/trainingApi'
+import { fetchGetTrainingList } from '../actions/trainingActions'
 
 const currentTraining = (state) => state.training.currentTraining
 const trainingDetail = (state) => state.trainingDetail.trainingDetail
@@ -34,6 +36,8 @@ function* sagaWorkerEditTrainingDetailCycles() {
     yield call(editTrainingDetailCyclesFromApi, training.id, training.cycles)
     let getTrainingDetailResult = yield call(getTrainingDetailFromApi, training.id)
     yield put(fetchTrainingDetail(getTrainingDetailResult.result.training))
+    let getTrainingListResult = yield call(getTrainingListFromApi)
+    yield put(fetchGetTrainingList(getTrainingListResult))
 }
 
 function* sagaWorkerEditTrainingDetailStartCardioMinutes() {          
@@ -41,6 +45,8 @@ function* sagaWorkerEditTrainingDetailStartCardioMinutes() {
     yield call(editTrainingDetailStartCardioMinutesFromApi, training.id, training.startCardioMinutes)
     let getTrainingDetailResult = yield call(getTrainingDetailFromApi, training.id)
     yield put(fetchTrainingDetail(getTrainingDetailResult.result.training))
+    let getTrainingListResult = yield call(getTrainingListFromApi)
+    yield put(fetchGetTrainingList(getTrainingListResult))
 }
 
 function* sagaWorkerEditTrainingDetailFinishCardioMinutes() {          
@@ -48,4 +54,6 @@ function* sagaWorkerEditTrainingDetailFinishCardioMinutes() {
     yield call(editTrainingDetailFinishCardioMinutesFromApi, training.id, training.finishCardioMinutes)
     let getTrainingDetailResult = yield call(getTrainingDetailFromApi, training.id)
     yield put(fetchTrainingDetail(getTrainingDetailResult.result.training))
+    let getTrainingListResult = yield call(getTrainingListFromApi)
+    yield put(fetchGetTrainingList(getTrainingListResult))
 }

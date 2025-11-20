@@ -11,6 +11,8 @@ import {
     deleteExerciseFromApi
 } from '../api/exerciseApi'
 import {getTrainingDetailFromApi} from '../api/trainingDetailApi'
+import { getTrainingListFromApi } from '../api/trainingApi'
+import { fetchGetTrainingList } from '../actions/trainingActions'
 
 const currentExercise = (state) => state.exercise.currentExercise
 const currentExerciseTemplate = (state) => state.exerciseTemplate.currentExerciseTemplate
@@ -28,6 +30,8 @@ function* sagaWorkerCreateExercise() {
     yield call(createExerciseFromApi, exerciseTemplate.id, training.id)
     let getTrainingDetailResult = yield call(getTrainingDetailFromApi, training.id)
     yield put(fetchTrainingDetail(getTrainingDetailResult))
+    let getTrainingListResult = yield call(getTrainingListFromApi)
+    yield put(fetchGetTrainingList(getTrainingListResult))
 }
 
 function* sagaWorkerEditExercise() {  
@@ -36,6 +40,8 @@ function* sagaWorkerEditExercise() {
     yield call(editExerciseFromApi, exercise.id, exercise.order, exercise.weight, exercise.countIterations, exercise.minutes)
     let getTrainingDetailResult = yield call(getTrainingDetailFromApi, training.id)
     yield put(fetchTrainingDetail(getTrainingDetailResult))
+    let getTrainingListResult = yield call(getTrainingListFromApi)
+    yield put(fetchGetTrainingList(getTrainingListResult))
 }
 
 function* sagaWorkerDeleteExercise() {         
@@ -44,4 +50,6 @@ function* sagaWorkerDeleteExercise() {
     yield call(deleteExerciseFromApi, exercise.id)
     let getTrainingDetailResult = yield call(getTrainingDetailFromApi, training.id)
     yield put(fetchTrainingDetail(getTrainingDetailResult))
+    let getTrainingListResult = yield call(getTrainingListFromApi)
+    yield put(fetchGetTrainingList(getTrainingListResult))
 }
