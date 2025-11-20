@@ -8,11 +8,17 @@ export const TrainingListItem = ({key, training}) => {
     
     const dispatch = useDispatch()
 
+    let className = 'training-list-item-name'
+ 
+    if (training.totalWeight >= 0 && training.totalWeight < 1000) { className = className + ' training-list-item-name-low' }
+    if (training.totalWeight >= 1000 && training.totalWeight < 2000) { className = className + ' training-list-item-name-middle' }
+    if (training.totalWeight >= 2000) { className = className + ' training-list-item-name-high' }
+
     return (
         <React.Fragment>
             <div className='training-list-item'>
                 <div 
-                    className='training-list-item-name' 
+                    className={className} 
                     key={key}
                     onClick={() => {
                         dispatch(fetchCurrentTraining({...training}))
