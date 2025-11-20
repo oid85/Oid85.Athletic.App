@@ -1,10 +1,11 @@
 import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {fetchCurrentTraining} from '../../redux/actions/trainingActions'
+import {fetchCurrentPlan} from '../../redux/actions/planActions'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 
-export const PlanListItemTraining = ({training}) => {
+export const PlanListItemTraining = ({training, planTraining}) => {
 
     const dispatch = useDispatch()
 
@@ -21,6 +22,7 @@ export const PlanListItemTraining = ({training}) => {
                 className={className}
                 onClick={() => {
                     dispatch(fetchCurrentTraining({...training}))
+                    dispatch(fetchCurrentPlan({...planTraining}))
                     }}>
                 {
                     !training.name ? <div></div> :
