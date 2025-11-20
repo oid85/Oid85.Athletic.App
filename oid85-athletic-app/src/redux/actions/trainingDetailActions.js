@@ -4,6 +4,10 @@ import {
     SAGA_EDIT_TRAINING_DETAIL_START_CARDIO_MINUTES,
     SAGA_EDIT_TRAINING_DETAIL_FINISH_CARDIO_MINUTES,
     FETCH_TRAINING_DETAIL,
+    SHOW_ADD_PLAN_TRAINING_BUTTON,
+    HIDE_ADD_PLAN_TRAINING_BUTTON,
+    SHOW_REMOVE_PLAN_TRAINING_BUTTON,
+    HIDE_REMOVE_PLAN_TRAINING_BUTTON,    
     SHOW_EDIT_TRAINING_DETAIL_CYCLES_MODAL,
     HIDE_EDIT_TRAINING_DETAIL_CYCLES_MODAL,
     SHOW_EDIT_TRAINING_DETAIL_START_CARDIO_MINUTES_MODAL,
@@ -41,6 +45,30 @@ export const fetchTrainingDetail = (data) => {
     return {
         type: FETCH_TRAINING_DETAIL,
         payload: data
+    }
+}
+
+export const showAddPlanTrainingButton = () => {
+    return {
+        type: SHOW_ADD_PLAN_TRAINING_BUTTON
+    }
+}
+
+export const hideAddPlanTrainingButton = () => {
+    return {
+        type: HIDE_ADD_PLAN_TRAINING_BUTTON
+    }
+}
+
+export const showRemovePlanTrainingButton = () => {
+    return {
+        type: SHOW_REMOVE_PLAN_TRAINING_BUTTON
+    }
+}
+
+export const hideRemovePlanTrainingButton = () => {
+    return {
+        type: HIDE_REMOVE_PLAN_TRAINING_BUTTON
     }
 }
 

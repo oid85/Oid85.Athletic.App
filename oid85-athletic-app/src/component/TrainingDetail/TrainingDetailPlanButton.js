@@ -5,6 +5,10 @@ import './styles.css'
 export const TrainingDetailPlanButton = () => {
 
     const currentTraining = useSelector(state => state.training.currentTraining)
+    const addPlanTrainingButtonIsVisible = useSelector(state => state.trainingDetail.addPlanTrainingButtonIsVisible)
+    const removePlanTrainingButtonIsVisible = useSelector(state => state.trainingDetail.removePlanTrainingButtonIsVisible)
+
+    console.log(addPlanTrainingButtonIsVisible, removePlanTrainingButtonIsVisible)
 
     return (
         <React.Fragment> 
@@ -13,16 +17,27 @@ export const TrainingDetailPlanButton = () => {
                 ? <div></div>
                 :                 
                 <div>
-                    <button 
+                    {
+                        !addPlanTrainingButtonIsVisible
+                        ? <div></div>
+                        :
+                        <button 
                         className='btn btn-outline-link'
                         onClick={() => {
                         
-                    }}>Добавить в план</button>
-                    <button 
+                        }}>Добавить в план</button>
+                    }
+
+                    {
+                        !removePlanTrainingButtonIsVisible
+                        ? <div></div>
+                        :
+                        <button 
                         className='btn btn-outline-link'
                         onClick={() => {
                         
-                    }}>Убрать из плана</button>                    
+                        }}>Убрать из плана</button>
+                    }                   
                 </div>                
             }                     
         </React.Fragment>  

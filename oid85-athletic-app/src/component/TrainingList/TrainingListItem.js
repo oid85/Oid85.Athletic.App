@@ -1,6 +1,7 @@
 import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {fetchCurrentTraining, showEditTrainingModal} from '../../redux/actions/trainingActions'
+import {showAddPlanTrainingButton, hideRemovePlanTrainingButton} from '../../redux/actions/trainingDetailActions'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 
@@ -22,6 +23,8 @@ export const TrainingListItem = ({key, training}) => {
                     key={key}
                     onClick={() => {
                         dispatch(fetchCurrentTraining({...training}))
+                        dispatch(showAddPlanTrainingButton())
+                        dispatch(hideRemovePlanTrainingButton())
                         }}>{`${training.name} (x${training.totalCountIterations}/${training.totalWeight} кг)`}</div>
                 <button 
                     className='btn btn-outline-link training-list-item-button'
