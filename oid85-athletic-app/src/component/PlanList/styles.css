@@ -37,6 +37,22 @@
     margin: 1px;  
 }
 
+.plan-list-item-training-lightgreen { 
+    background-color: #90EE90; 
+}
+
+.plan-list-item-training-lightyellow { 
+    background-color: #FFFFE0; 
+}
+
+.plan-list-item-training-lightsalmon { 
+    background-color: #FFA07A; 
+}
+
+.plan-list-item-training-tomato { 
+    background-color: #FF6347; 
+}
+
 .plan-list-item-training-name { 
     height: 45px; 
 }
