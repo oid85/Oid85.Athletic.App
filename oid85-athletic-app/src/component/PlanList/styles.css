@@ -28,7 +28,7 @@
     margin: 1px;  
 }
 
-.plan-list-item-morning-training { 
+.plan-list-item-training { 
     border: 1px solid #C0C0C0;
     border-radius: 5px;
     font-size: 12px;
@@ -37,11 +37,6 @@
     margin: 1px;  
 }
 
-.plan-list-item-day-training { 
-    border: 1px solid #C0C0C0;
-    border-radius: 5px;
-    font-size: 12px;
-    height: 91px;
-    width: 110px;
-    margin: 1px;  
+.plan-list-item-training-name { 
+    height: 45px; 
 }
