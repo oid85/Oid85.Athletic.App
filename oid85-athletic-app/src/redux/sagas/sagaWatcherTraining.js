@@ -1,7 +1,7 @@
 import {call, put, select, takeEvery} from 'redux-saga/effects'
 import {fetchGetTrainingList} from '../actions/trainingActions'
 import {
-    SAGA_GET_TRAINING_LIST, 
+    SAGA_TRAINING_LIST, 
     SAGA_CREATE_TRAINING, 
     SAGA_EDIT_TRAINING, 
     SAGA_DELETE_TRAINING
@@ -16,7 +16,7 @@ import {
 const currentTraining = (state) => state.training.currentTraining
 
 export function* sagaWatcherTraining() {
-    yield takeEvery(SAGA_GET_TRAINING_LIST, sagaWorkerGetTrainingList)
+    yield takeEvery(SAGA_TRAINING_LIST, sagaWorkerGetTrainingList)
     yield takeEvery(SAGA_CREATE_TRAINING, sagaWorkerCreateTraining)
     yield takeEvery(SAGA_EDIT_TRAINING, sagaWorkerEditTraining)
     yield takeEvery(SAGA_DELETE_TRAINING, sagaWorkerDeleteTraining)

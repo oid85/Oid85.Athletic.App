@@ -1,9 +1,9 @@
 import {
-    SAGA_GET_TRAINING_LIST,
+    SAGA_TRAINING_LIST,
     SAGA_CREATE_TRAINING,
     SAGA_EDIT_TRAINING,
     SAGA_DELETE_TRAINING,
-    FETCH_GET_TRAINING_LIST,
+    FETCH_TRAINING_LIST,
     FETCH_CURRENT_TRAINING,
     SHOW_CREATE_TRAINING_MODAL,
     HIDE_CREATE_TRAINING_MODAL,
@@ -14,7 +14,7 @@ import {
 
 export const sagaGetTrainingList = () => {
     return {
-        type: SAGA_GET_TRAINING_LIST
+        type: SAGA_TRAINING_LIST
     }
 }
 
@@ -38,7 +38,7 @@ export const sagaEditTraining = () => {
 
 export const fetchGetTrainingList = (data) => {
     return {
-        type: FETCH_GET_TRAINING_LIST,
+        type: FETCH_TRAINING_LIST,
         payload: data
     }
 }

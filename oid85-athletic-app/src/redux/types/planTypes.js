@@ -1,0 +1,3 @@
+export const SAGA_PLAN_LIST = 'SAGA_PLAN_LIST'
+
+export const FETCH_PLAN_LIST = 'FETCH_PLAN_LIST'

@@ -4,11 +4,13 @@ import { exerciseTemplateReducer } from './exerciseTemplateReducer'
 import { exerciseReducer } from './exerciseReducer'
 import { trainingReducer } from './trainingReducer'
 import { trainingDetailReducer } from './trainingDetailReducer'
+import { planReducer } from './planReducer'
 
 export const rootReducer = combineReducers({
     app: appReducer,
 	exerciseTemplate: exerciseTemplateReducer,
     exercise: exerciseReducer,
     training: trainingReducer,
-    trainingDetail: trainingDetailReducer
+    trainingDetail: trainingDetailReducer,
+    plan: planReducer
 })

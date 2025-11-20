@@ -1,5 +1,5 @@
 import {
-    FETCH_GET_TRAINING_LIST,
+    FETCH_TRAINING_LIST,
     FETCH_CURRENT_TRAINING,
     SHOW_CREATE_TRAINING_MODAL,
     HIDE_CREATE_TRAINING_MODAL,
@@ -17,7 +17,7 @@ const initialState = {
 export const trainingReducer = (state = initialState, action) => {
     switch (action.type) {
 
-        case FETCH_GET_TRAINING_LIST:
+        case FETCH_TRAINING_LIST:
             return {...state, trainingList: {...action.payload}}
 
         case FETCH_CURRENT_TRAINING:

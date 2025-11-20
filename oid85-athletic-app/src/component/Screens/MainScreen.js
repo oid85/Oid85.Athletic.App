@@ -5,7 +5,7 @@ import { Alert } from '../Alert/Alert'
 import {ExerciseTemplateList} from "../ExerciseTemplateList/ExerciseTemplateList"
 import {TrainingDetail} from "../TrainingDetail/TrainingDetail"
 import {TrainingList} from "../TrainingList/TrainingList"
-import {Plan} from "../Plan/Plan"
+import {PlanList} from "../PlanList/PlanList"
 import './styles.css'
 
 export const MainScreen = () => {
@@ -21,7 +21,7 @@ export const MainScreen = () => {
                     <TrainingList />
                 </div>
                 <div>
-                    <Plan />
+                    <PlanList />
                 </div>
             </div>            
         </React.Fragment>
