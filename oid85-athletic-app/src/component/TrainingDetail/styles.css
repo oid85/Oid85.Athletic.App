@@ -39,27 +39,27 @@
 
 .training-detail-exercise-list-item-order {
     width: 50px;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .training-detail-exercise-list-item-name {
     width: 500px;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .training-detail-exercise-list-item-count-iterations {
     width: 70px;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .training-detail-exercise-list-item-minutes {
     width: 70px;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .training-detail-exercise-list-item-weight {
     width: 100px;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .training-detail-exercise-list-item-button {
@@ -75,7 +75,7 @@
 
 .training-detail-cycles-value {
     text-align: center;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .training-detail-cycles-button {
@@ -91,7 +91,7 @@
 
 .training-detail-start-cardio-minutes-value {
     text-align: center;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .training-detail-start-cardio-minutes-button {
@@ -107,7 +107,7 @@
 
 .training-detail-finish-cardio-minutes-value {
     text-align: center;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .training-detail-finish-cardio-minutes-button {
