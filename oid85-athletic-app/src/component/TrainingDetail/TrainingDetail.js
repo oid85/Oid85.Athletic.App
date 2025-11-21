@@ -14,6 +14,7 @@ import { EditTrainingDetailCyclesModal } from './EditTrainingDetailCyclesModal'
 import { EditTrainingDetailStartCardioMinutesModal } from './EditTrainingDetailStartCardioMinutesModal'
 import { EditTrainingDetailFinishCardioMinutesModal } from './EditTrainingDetailFinishCardioMinutesModal'
 import { TrainingDetailPlanButton } from './TrainingDetailPlanButton'
+import { AddPlanTrainingModal } from './AddPlanTrainingModal'
 
 export const TrainingDetail = () => {
   
@@ -48,6 +49,7 @@ export const TrainingDetail = () => {
                 <EditTrainingDetailCyclesModal />
                 <EditTrainingDetailStartCardioMinutesModal />
                 <EditTrainingDetailFinishCardioMinutesModal />
+                <AddPlanTrainingModal />
             </div>          
         }
         </React.Fragment>  

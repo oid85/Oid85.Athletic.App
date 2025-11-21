@@ -191,3 +191,27 @@
     margin: 5px;
     font-size: 10px;
 }
+
+/*add-plan-training-modal*/
+.add-plan-training-modal-modal-save-morning-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.add-plan-training-modal-modal-save-day-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.add-plan-training-modal-cancel-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.add-plan-training-modal-date {
+    margin: 5px;
+    font-size: 10px;
+}

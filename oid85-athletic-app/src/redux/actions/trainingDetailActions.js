@@ -13,7 +13,9 @@ import {
     SHOW_EDIT_TRAINING_DETAIL_START_CARDIO_MINUTES_MODAL,
     HIDE_EDIT_TRAINING_DETAIL_START_CARDIO_MINUTES_MODAL,
     SHOW_EDIT_TRAINING_DETAIL_FINISH_CARDIO_MINUTES_MODAL,
-    HIDE_EDIT_TRAINING_DETAIL_FINISH_CARDIO_MINUTES_MODAL
+    HIDE_EDIT_TRAINING_DETAIL_FINISH_CARDIO_MINUTES_MODAL,
+    SHOW_ADD_PLAN_TRAINING_MODAL,
+    HIDE_ADD_PLAN_TRAINING_MODAL
 } from '../types/trainingDetailTypes'
 
 
@@ -105,5 +107,17 @@ export const showEditTrainingDetailFinishCardioMinutesModal = () => {
 export const hideEditTrainingDetailFinishCardioMinutesModal = () => {
     return {
         type: HIDE_EDIT_TRAINING_DETAIL_FINISH_CARDIO_MINUTES_MODAL
+    }
+}
+
+export const showAddPlanTrainingModal = () => {
+    return {
+        type: SHOW_ADD_PLAN_TRAINING_MODAL
+    }
+}
+
+export const hideAddPlanTrainingModal = () => {
+    return {
+        type: HIDE_ADD_PLAN_TRAINING_MODAL
     }
 }

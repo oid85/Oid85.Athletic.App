@@ -9,7 +9,9 @@ import {
     SHOW_EDIT_TRAINING_DETAIL_START_CARDIO_MINUTES_MODAL,
     HIDE_EDIT_TRAINING_DETAIL_START_CARDIO_MINUTES_MODAL,
     SHOW_EDIT_TRAINING_DETAIL_FINISH_CARDIO_MINUTES_MODAL,
-    HIDE_EDIT_TRAINING_DETAIL_FINISH_CARDIO_MINUTES_MODAL   
+    HIDE_EDIT_TRAINING_DETAIL_FINISH_CARDIO_MINUTES_MODAL,
+    SHOW_ADD_PLAN_TRAINING_MODAL,
+    HIDE_ADD_PLAN_TRAINING_MODAL
 } from '../types/trainingDetailTypes'
 
 const initialState = {    
@@ -18,7 +20,8 @@ const initialState = {
     removePlanTrainingButtonIsVisible: false,
     editTrainingDetailCyclesModalIsOpened: false,
     editTrainingDetailStartCardioMinutesModalIsOpened: false,
-    editTrainingDetailFinishCardioMinutesModalIsOpened: false
+    editTrainingDetailFinishCardioMinutesModalIsOpened: false,
+    addPlanTrainingModalIsOpened: false
 }
 
 export const trainingDetailReducer = (state = initialState, action) => {
@@ -56,6 +59,12 @@ export const trainingDetailReducer = (state = initialState, action) => {
         
         case HIDE_EDIT_TRAINING_DETAIL_FINISH_CARDIO_MINUTES_MODAL:
             return {...state, editTrainingDetailFinishCardioMinutesModalIsOpened: false}
+
+        case SHOW_ADD_PLAN_TRAINING_MODAL:
+            return {...state, addPlanTrainingModalIsOpened: true}
+        
+        case HIDE_ADD_PLAN_TRAINING_MODAL:
+            return {...state, addPlanTrainingModalIsOpened: false}
 
         default: return state
     }
