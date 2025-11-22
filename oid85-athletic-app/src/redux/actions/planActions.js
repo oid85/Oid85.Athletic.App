@@ -1,13 +1,33 @@
 import {
     SAGA_PLAN_LIST,
+    SAGA_ADD_MORNING_TRAINING_PLAN,
+    SAGA_ADD_DAY_TRAINING_PLAN,
+    SAGA_REMOVE_TRAINING_PLAN,
     FETCH_PLAN_LIST,
     FETCH_CURRENT_PLAN_LIST
 } from '../types/planTypes'
 
-
 export const sagaGetPlanList = () => {
     return {
         type: SAGA_PLAN_LIST
+    }
+}
+
+export const sagaAddMorningTrainingPlan = () => {
+    return {
+        type: SAGA_ADD_MORNING_TRAINING_PLAN
+    }
+}
+
+export const sagaAddDayTrainingPlan = () => {
+    return {
+        type: SAGA_ADD_DAY_TRAINING_PLAN
+    }
+}
+
+export const sagaRemoveTrainingPlan = () => {
+    return {
+        type: SAGA_REMOVE_TRAINING_PLAN
     }
 }
 
