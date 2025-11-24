@@ -17,16 +17,16 @@
     border: 1px solid #C0C0C0;
     border-radius: 5px;
     text-align: left;    
-    height: 50px;
+    height: 30px;
     width: 420px;
-    font-size: 18px;
+    font-size: 16px;
     margin: 1px;
     padding: 1px;
 }
 
 .exercise-template-list-item-button {
     width: 30px;
-    height: 50px;
+    height: 30px;
     margin: 1px;
     font-size: 6px;
 }
