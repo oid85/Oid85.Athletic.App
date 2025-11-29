@@ -1,13 +1,10 @@
 import React from 'react'
+import { intensityColor } from '../../colorHelper'
 import './styles.css'
 
 export const TrainingDetailIntensity = ({totalCountIterations, totalWeight}) => {
 
-    let className = 'training-detail-intensity'
- 
-    if (totalWeight >= 0 && totalWeight < 1000) { className = className + ' training-detail-intensity-low' }
-    if (totalWeight >= 1000 && totalWeight < 2000) { className = className + ' training-detail-intensity-middle' }
-    if (totalWeight >= 2000) { className = className + ' training-detail-intensity-high' }    
+    let color = intensityColor(totalWeight)
 
     return (
         <React.Fragment>
@@ -15,7 +12,9 @@ export const TrainingDetailIntensity = ({totalCountIterations, totalWeight}) => 
                 !totalCountIterations || !totalWeight
                 ? <div></div>
                 :
-                <div className={className}>
+                <div 
+                    className='training-detail-intensity'
+                    style={{backgroundColor: color}}>
                 {`Интенсивность: x${totalCountIterations}/${totalWeight} кг`}
             </div>                                        
             }                   

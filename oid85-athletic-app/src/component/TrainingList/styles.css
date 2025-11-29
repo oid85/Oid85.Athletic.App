@@ -13,18 +13,6 @@
     flex-direction: row;      
 }
 
-.training-list-item-name-low { 
-    background-color: #FFFFE0; 
-}
-
-.training-list-item-name-middle { 
-    background-color: #FFA07A; 
-}
-
-.training-list-item-name-high { 
-    background-color: #FF7F50; 
-}
-
 .training-list-item-name {
     border: 1px solid #C0C0C0;
     border-radius: 5px;

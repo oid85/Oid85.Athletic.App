@@ -4,22 +4,20 @@ import {fetchCurrentTraining, showEditTrainingModal} from '../../redux/actions/t
 import {showAddPlanTrainingButton, hideRemovePlanTrainingButton} from '../../redux/actions/trainingDetailActions'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
+import { intensityColor } from '../../colorHelper'
 
 export const TrainingListItem = ({key, training}) => {
     
     const dispatch = useDispatch()
 
-    let className = 'training-list-item-name'
- 
-    if (training.totalWeight >= 0 && training.totalWeight < 1000) { className = className + ' training-list-item-name-low' }
-    if (training.totalWeight >= 1000 && training.totalWeight < 2000) { className = className + ' training-list-item-name-middle' }
-    if (training.totalWeight >= 2000) { className = className + ' training-list-item-name-high' }
+    let color = intensityColor(training.totalWeight)
 
     return (
         <React.Fragment>
             <div className='training-list-item'>
                 <div 
-                    className={className} 
+                    className='training-list-item-name'
+                    style={{backgroundColor: color}}
                     key={key}
                     onClick={() => {
                         dispatch(fetchCurrentTraining({...training}))
