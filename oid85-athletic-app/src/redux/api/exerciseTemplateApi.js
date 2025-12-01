@@ -6,12 +6,12 @@ export const getExerciseTemplateListFromApi = async () => {
     return sendPostRequest(`${controller}/list`, {})
 }
 
-export const createExerciseTemplateFromApi = async (name, equipment, muscles) => {
-    return sendPostRequest(`${controller}/create`, {name, equipment, muscles})
+export const createExerciseTemplateFromApi = async (name) => {
+    return sendPostRequest(`${controller}/create`, {name})
 }
 
-export const editExerciseTemplateFromApi = async (id, name, equipment, muscles) => {
-    return sendPostRequest(`${controller}/edit`, {id, name, equipment, muscles})
+export const editExerciseTemplateFromApi = async (id, name) => {
+    return sendPostRequest(`${controller}/edit`, {id, name})
 }
 
 export const deleteExerciseTemplateFromApi = async (id) => {

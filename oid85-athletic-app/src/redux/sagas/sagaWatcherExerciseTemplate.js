@@ -27,16 +27,16 @@ function* sagaWorkerGetExerciseTemplateList() {
     yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
 }
 
-function* sagaWorkerCreateExerciseTemplate() {         
-    let exerciseTemplate = yield select(currentExerciseTemplate)        
-    yield call(createExerciseTemplateFromApi, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
+function* sagaWorkerCreateExerciseTemplate() {
+    let exerciseTemplate = yield select(currentExerciseTemplate)
+    yield call(createExerciseTemplateFromApi, exerciseTemplate.name)
     let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
     yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
 }
 
-function* sagaWorkerEditExerciseTemplate() {          
-    let exerciseTemplate = yield select(currentExerciseTemplate)        
-    yield call(editExerciseTemplateFromApi, exerciseTemplate.id, exerciseTemplate.name, exerciseTemplate.equipment, exerciseTemplate.muscles)
+function* sagaWorkerEditExerciseTemplate() {
+    let exerciseTemplate = yield select(currentExerciseTemplate)
+    yield call(editExerciseTemplateFromApi, exerciseTemplate.id, exerciseTemplate.name)
     let getExerciseTemplateListResult = yield call(getExerciseTemplateListFromApi)
     yield put(fetchGetExerciseTemplateList(getExerciseTemplateListResult))
 }

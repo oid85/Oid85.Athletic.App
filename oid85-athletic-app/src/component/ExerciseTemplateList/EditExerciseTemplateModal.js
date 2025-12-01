@@ -47,24 +47,6 @@ export const EditExerciseTemplateModal = () => {
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, name: event.target.value})) 
                                 }} />
-                        <label>Оборудование</label>
-                        <input 
-                            className='form-control edit-exercise-template-modal-input' 
-                            type="text" 
-                            defaultValue={currentExerciseTemplate.equipment} 
-                            placeholder='Оборудование' 
-                            onChange={ (event) => { 
-                                dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, equipment: event.target.value})) 
-                                }} />
-                        <label>Группы мышц</label>
-                        <input 
-                            className='form-control edit-exercise-template-modal-input' 
-                            type="text" 
-                            defaultValue={currentExerciseTemplate.muscles} 
-                            placeholder='Группы мышц' 
-                            onChange={ (event) => { 
-                                dispatch(fetchCurrentExerciseTemplate({...currentExerciseTemplate, muscles: event.target.value})) 
-                                }} />
                         <button 
                             className='btn btn-outline-primary edit-exercise-template-modal-save-button' 
                             onClick={ () => {
