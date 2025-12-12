@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import Modal from 'react-modal';
 import moment from 'moment'
@@ -12,6 +12,10 @@ export const AddPlanTrainingModal = () => {
     const dispatch = useDispatch()
     const addPlanTrainingModalIsOpened = useSelector(state => state.trainingDetail.addPlanTrainingModalIsOpened)
     const currentPlan = useSelector(state => state.plan.currentPlan)
+
+    useEffect(() => {
+        dispatch(fetchCurrentPlan({...currentPlan, date: moment().format('YYYY-MM-DD').toString()}))
+    }, [])
 
     const customStyles = {
         content: {
