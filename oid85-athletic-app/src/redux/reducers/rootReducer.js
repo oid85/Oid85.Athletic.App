@@ -5,6 +5,7 @@ import { exerciseReducer } from './exerciseReducer'
 import { trainingReducer } from './trainingReducer'
 import { trainingDetailReducer } from './trainingDetailReducer'
 import { planReducer } from './planReducer'
+import { pressureReducer } from './pressureReducer'
 
 export const rootReducer = combineReducers({
     app: appReducer,
@@ -12,5 +13,6 @@ export const rootReducer = combineReducers({
     exercise: exerciseReducer,
     training: trainingReducer,
     trainingDetail: trainingDetailReducer,
-    plan: planReducer
+    plan: planReducer,
+    pressure: pressureReducer
 })

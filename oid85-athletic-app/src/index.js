@@ -12,6 +12,7 @@ import { sagaWatcherExercise } from './redux/sagas/sagaWatcherExercise'
 import { sagaWatcherTraining } from './redux/sagas/sagaWatcherTraining'
 import { sagaWatcherTrainingDetail } from './redux/sagas/sagaWatcherTrainingDetail'
 import { sagaWatcherPlan } from './redux/sagas/sagaWatcherPlan'
+import { sagaWatcherPressure } from './redux/sagas/sagaWatcherPressure'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const saga = createSagaMiddleware()
@@ -26,6 +27,7 @@ saga.run(sagaWatcherExerciseTemplate)
 saga.run(sagaWatcherTraining)
 saga.run(sagaWatcherTrainingDetail)
 saga.run(sagaWatcherPlan)
+saga.run(sagaWatcherPressure)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 

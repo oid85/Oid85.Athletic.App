@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import 'react-tabs/style/react-tabs.css'
 import { Alert } from '../Alert/Alert'
 import { MainScreen } from '../Screens/MainScreen'
+import { PressureScreen } from '../Screens/PressureScreen'
 
 export const Workspace = () => {
     const alert = useSelector(state => state.app.alert)
@@ -14,10 +15,14 @@ export const Workspace = () => {
             <Tabs>
                 <TabList>
                     <Tab>Главная</Tab>
+                    <Tab>Давление</Tab>
                 </TabList>
                 <TabPanel>
-                    <MainScreen />
+                    <PressureScreen />
                 </TabPanel>
+                <TabPanel>
+                    <PressureScreen />
+                </TabPanel>                
             </Tabs>
         </React.Fragment>
     )    
