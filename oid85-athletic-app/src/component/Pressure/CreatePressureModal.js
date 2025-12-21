@@ -38,21 +38,21 @@ export const CreatePressureModal = () => {
                         <input 
                             className='form-control create-pressure-modal-input' 
                             type="number"                              
-                            placeholder='SYS' 
+                            placeholder='Систолическое' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentPressure({...currentPressure, sys: event.target.value})) 
                                 }} />
                         <input 
                             className='form-control create-pressure-modal-input' 
                             type="number"                              
-                            placeholder='DIA' 
+                            placeholder='Диастолическое' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentPressure({...currentPressure, dia: event.target.value})) 
                                 }} />
                         <input 
                             className='form-control create-pressure-modal-input' 
                             type="number"                              
-                            placeholder='PULSE' 
+                            placeholder='Пульс' 
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentPressure({...currentPressure, pulse: event.target.value})) 
                                 }} />                                                                
