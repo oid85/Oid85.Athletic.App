@@ -4,6 +4,8 @@ import Loader from '../Loader/Loader'
 import {sagaGetPressureList} from '../../redux/actions/pressureActions'
 import {PressureListDayItem} from './PressureListDayItem'
 import './styles.css'
+import { CreatePressureButton } from './CreatePressureButton'
+import { CreatePressureModal } from './CreatePressureModal'
 
 export const PressureList = () => {
     
@@ -22,6 +24,7 @@ export const PressureList = () => {
             ? <Loader/>
             : 
             <div className='pressure-list vertical-container'>
+                <CreatePressureButton />
                 {
                     <div className='horizontal-container'>
                         <div className='pressure-empty-cell border-style'></div>   
@@ -38,7 +41,8 @@ export const PressureList = () => {
                     pressureList.result.dayItems.map((dayItem, index) => (
                         <PressureListDayItem key = {index} dayItem = {dayItem} />
                     ))
-                }                   
+                }
+                <CreatePressureModal />
             </div>        
         }
         </React.Fragment>                

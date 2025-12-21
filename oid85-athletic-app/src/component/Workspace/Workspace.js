@@ -18,7 +18,7 @@ export const Workspace = () => {
                     <Tab>Давление</Tab>
                 </TabList>
                 <TabPanel>
-                    <PressureScreen />
+                    <MainScreen />
                 </TabPanel>
                 <TabPanel>
                     <PressureScreen />

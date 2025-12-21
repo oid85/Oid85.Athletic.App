@@ -35,3 +35,28 @@
 .time-cell { 
     width: 113px;    
 }
+
+/*Create modal*/
+.create-pressure-button {
+    height: 50px;
+    width: 420px;
+    margin: 1px;
+    font-size: 10px;
+}
+
+.create-pressure-modal-save-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.create-pressure-modal-cancel-button {
+    width: 100px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.create-pressure-modal-input {
+    margin: 5px;
+    font-size: 10px;
+}
