@@ -24,7 +24,7 @@
 }
 
 .pressure-calendar { 
-    height: 95px;
+    height: 100px;
     width: 50px;    
 }
 
@@ -36,10 +36,18 @@
     width: 113px;    
 }
 
+.pressure-value-cell { 
+    font-size: 20px;
+}
+
+.pulse-value-cell { 
+    font-size: 12px;
+}
+
 /*Create modal*/
 .create-pressure-button {
     height: 50px;
-    width: 420px;
+    width: 164px;
     margin: 1px;
     font-size: 10px;
 }

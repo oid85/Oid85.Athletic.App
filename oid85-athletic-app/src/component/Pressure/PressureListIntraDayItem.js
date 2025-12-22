@@ -11,9 +11,9 @@ export const PressureListIntraDayItem = ({key, intraDayItem}) => {
     return (
         <React.Fragment>
             <div className='vertical-container border-style' key={key}>
-                {!intraDayItem.sys ? <div></div> : <div className='border-style' style={{backgroundColor: sysColor}}>{intraDayItem.sys}</div>}
-                {!intraDayItem.dia ? <div></div> : <div className='border-style' style={{backgroundColor: diaColor}}>{intraDayItem.dia}</div>}
-                {!intraDayItem.pulse ? <div></div> : <div className='border-style'>{intraDayItem.pulse}</div>}
+                {!intraDayItem.sys ? <div></div> : <div className='pressure-value-cell border-style' style={{backgroundColor: sysColor}}>{intraDayItem.sys}</div>}
+                {!intraDayItem.dia ? <div></div> : <div className='pressure-value-cell border-style' style={{backgroundColor: diaColor}}>{intraDayItem.dia}</div>}
+                {!intraDayItem.pulse ? <div></div> : <div className='pulse-value-cell border-style'>{intraDayItem.pulse}</div>}
             </div>
         </React.Fragment>
     )
