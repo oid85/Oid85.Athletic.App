@@ -34,7 +34,6 @@ export const CreatePressureModal = () => {
                     style={customStyles}>
                     <h6>Новое измерение</h6>
                     <form>
-                        <label>Наименование</label>
                         <input 
                             className='form-control create-pressure-modal-input' 
                             type="number"                              

@@ -5,6 +5,7 @@ import 'react-tabs/style/react-tabs.css'
 import { Alert } from '../Alert/Alert'
 import { MainScreen } from '../Screens/MainScreen'
 import { PressureScreen } from '../Screens/PressureScreen'
+import { GlucoseScreen } from '../Screens/GlucoseScreen'
 
 export const Workspace = () => {
     const alert = useSelector(state => state.app.alert)
@@ -16,13 +17,17 @@ export const Workspace = () => {
                 <TabList>
                     <Tab>Главная</Tab>
                     <Tab>Давление</Tab>
+                    <Tab>Глюкоза</Tab>
                 </TabList>
                 <TabPanel>
                     <MainScreen />
                 </TabPanel>
                 <TabPanel>
                     <PressureScreen />
-                </TabPanel>                
+                </TabPanel>  
+                <TabPanel>
+                    <GlucoseScreen />
+                </TabPanel>                              
             </Tabs>
         </React.Fragment>
     )    

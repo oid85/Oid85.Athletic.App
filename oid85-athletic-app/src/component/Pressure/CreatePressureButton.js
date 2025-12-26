@@ -14,7 +14,7 @@ export const CreatePressureButton = () => {
                 className='btn btn-outline-primary create-pressure-button'
                 onClick={() => 
                 dispatch(showCreatePressureModal())
-                }>Новое измерение</button>
+                }>Добавить</button>
         </React.Fragment>
     )
 }
