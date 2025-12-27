@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import { useSelector } from 'react-redux'
 import 'react-tabs/style/react-tabs.css'
 import { Alert } from '../Alert/Alert'
-import { MainScreen } from '../Screens/MainScreen'
+import { TrainingScreen } from '../Screens/TrainingScreen'
 import { PressureScreen } from '../Screens/PressureScreen'
 import { GlucoseScreen } from '../Screens/GlucoseScreen'
 
@@ -15,12 +15,12 @@ export const Workspace = () => {
             {alert && <Alert text={alert} />}
             <Tabs>
                 <TabList>
-                    <Tab>Главная</Tab>
+                    <Tab>Тренировки</Tab>
                     <Tab>Давление</Tab>
                     <Tab>Глюкоза</Tab>
                 </TabList>
                 <TabPanel>
-                    <MainScreen />
+                    <TrainingScreen />
                 </TabPanel>
                 <TabPanel>
                     <PressureScreen />

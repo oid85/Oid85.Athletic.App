@@ -8,7 +8,7 @@ import {TrainingList} from "../TrainingList/TrainingList"
 import {PlanList} from "../PlanList/PlanList"
 import './styles.css'
 
-export const MainScreen = () => {
+export const TrainingScreen = () => {
     const alert = useSelector(state => state.app.alert)
 
     return (
