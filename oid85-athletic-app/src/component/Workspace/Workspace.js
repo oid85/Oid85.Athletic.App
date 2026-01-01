@@ -4,8 +4,6 @@ import { useSelector } from 'react-redux'
 import 'react-tabs/style/react-tabs.css'
 import { Alert } from '../Alert/Alert'
 import { TrainingScreen } from '../Screens/TrainingScreen'
-import { PressureScreen } from '../Screens/PressureScreen'
-import { GlucoseScreen } from '../Screens/GlucoseScreen'
 
 export const Workspace = () => {
     const alert = useSelector(state => state.app.alert)
@@ -16,17 +14,9 @@ export const Workspace = () => {
             <Tabs>
                 <TabList>
                     <Tab>Тренировки</Tab>
-                    <Tab>Давление</Tab>
-                    <Tab>Глюкоза</Tab>
                 </TabList>
                 <TabPanel>
                     <TrainingScreen />
-                </TabPanel>
-                <TabPanel>
-                    <PressureScreen />
-                </TabPanel>  
-                <TabPanel>
-                    <GlucoseScreen />
                 </TabPanel>                              
             </Tabs>
         </React.Fragment>
