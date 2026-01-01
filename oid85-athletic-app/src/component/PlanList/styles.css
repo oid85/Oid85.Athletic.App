@@ -39,10 +39,11 @@
 .plan-list-item-training { 
     border: 1px solid #C0C0C0;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 16px;
     height: 90px;
-    width: 110px;
-    margin: 1px;  
+    width: 223px;
+    margin: 1px;
+    padding: 5px; 
 }
 
 .plan-list-item-training-lightgreen { 
@@ -50,5 +51,5 @@
 }
 
 .plan-list-item-training-name { 
-    height: 45px; 
+    height: 35px; 
 }

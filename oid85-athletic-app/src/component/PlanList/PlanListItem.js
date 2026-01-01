@@ -18,8 +18,7 @@ export const PlanListItem = ({key, planTraining}) => {
     return (
         <React.Fragment>
             <div className={className} key={key}>
-                <PlanListItemCalendar date = {planTraining.date} />
-                <PlanListItemTraining training = {{...planTraining.morningTraining}} planTraining = {planTraining} />
+                <PlanListItemCalendar date = {planTraining.date} />                
                 <PlanListItemTraining training = {{...planTraining.dayTraining}} planTraining = {planTraining} />
             </div>
         </React.Fragment>
