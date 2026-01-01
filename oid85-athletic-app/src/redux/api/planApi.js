@@ -6,10 +6,6 @@ export const getPlanListFromApi = async () => {
     return sendPostRequest(`${controller}/list/week`, {})
 }
 
-export const addMorningTrainingPlanFromApi = async (date, trainingId) => {
-    return sendPostRequest(`${controller}/set/morning`, {date, trainingId})
-}
-
 export const addDayTrainingPlanFromApi = async (date, trainingId) => {
     return sendPostRequest(`${controller}/set/day`, {date, trainingId})
 }

@@ -5,7 +5,7 @@ import moment from 'moment'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 import { hideAddPlanTrainingModal } from '../../redux/actions/trainingDetailActions';
-import { fetchCurrentPlan, sagaAddDayTrainingPlan, sagaAddMorningTrainingPlan } from '../../redux/actions/planActions';
+import { fetchCurrentPlan, sagaAddDayTrainingPlan } from '../../redux/actions/planActions';
 
 export const AddPlanTrainingModal = () => {
     
@@ -43,19 +43,13 @@ export const AddPlanTrainingModal = () => {
                             defaultValue={moment().format('YYYY-MM-DD').toString()}
                             onChange={ (event) => {                                 
                                 dispatch(fetchCurrentPlan({...currentPlan, date: event.target.value})) 
-                                }} />                               
-                        <button 
-                            className='btn btn-outline-primary add-plan-training-modal-modal-save-morning-button' 
-                            onClick={ () => {
-                                dispatch(sagaAddMorningTrainingPlan())
-                                dispatch(hideAddPlanTrainingModal())
-                                    }}>Утро</button>     
+                                }} />                                   
                         <button 
                             className='btn btn-outline-primary add-plan-training-modal-modal-save-day-button' 
                             onClick={ () => {
                                 dispatch(sagaAddDayTrainingPlan())
                                 dispatch(hideAddPlanTrainingModal())
-                                    }}>День</button>                                                                
+                                    }}>Добавить</button>                                                                
                         <button 
                             className='btn btn-outline-primary add-plan-training-modal-cancel-button' 
                             onClick={ () => { 

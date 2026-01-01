@@ -1,6 +1,5 @@
 import {
     SAGA_PLAN_LIST,
-    SAGA_ADD_MORNING_TRAINING_PLAN,
     SAGA_ADD_DAY_TRAINING_PLAN,
     SAGA_REMOVE_TRAINING_PLAN,
     FETCH_PLAN_LIST,
@@ -10,12 +9,6 @@ import {
 export const sagaGetPlanList = () => {
     return {
         type: SAGA_PLAN_LIST
-    }
-}
-
-export const sagaAddMorningTrainingPlan = () => {
-    return {
-        type: SAGA_ADD_MORNING_TRAINING_PLAN
     }
 }
 
