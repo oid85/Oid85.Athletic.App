@@ -15,7 +15,7 @@ export const AddPlanTrainingModal = () => {
 
     useEffect(() => {
         dispatch(fetchCurrentPlan({...currentPlan, date: moment().format('YYYY-MM-DD').toString()}))
-    }, [])
+    }, [dispatch])
 
     const customStyles = {
         content: {
