@@ -25,11 +25,11 @@ export const TrainingDetail = () => {
 
     useEffect(() => {
         dispatch(sagaTrainingDetail())
-    }, [])
+    }, [dispatch])
 
     useEffect(() => {
         dispatch(sagaTrainingDetail())
-    }, [currentTraining.id])
+    }, [dispatch, currentTraining.id])
 
     return (
         <React.Fragment>

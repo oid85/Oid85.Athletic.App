@@ -13,7 +13,7 @@ export const PlanList = () => {
 
     useEffect(() => {
         dispatch(sagaGetPlanList())
-    }, [])
+    }, [dispatch])
 
     return (
         <React.Fragment>
