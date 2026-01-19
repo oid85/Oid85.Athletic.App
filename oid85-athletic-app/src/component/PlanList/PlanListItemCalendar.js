@@ -9,7 +9,7 @@ export const PlanListItemCalendar = ({date}) => {
     let className = 'plan-list-item-calendar'
     let today = moment().format('YYYY-MM-DD').toString()
     
-    if (date === today)
+    if (date == today)
     {
         className = className + ' plan-list-item-calendar-today'
     }    

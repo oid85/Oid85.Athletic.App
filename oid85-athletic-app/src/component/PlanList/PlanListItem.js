@@ -10,7 +10,7 @@ export const PlanListItem = ({key, planTraining}) => {
     let className = 'plan-list-item'
     let today = moment().format('YYYY-MM-DD').toString()
     
-    if (planTraining.date === today)
+    if (planTraining.date == today)
     {
         className = className + ' plan-list-item-today'
     }

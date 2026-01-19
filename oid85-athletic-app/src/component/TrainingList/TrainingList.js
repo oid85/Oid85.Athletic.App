@@ -16,7 +16,7 @@ export const TrainingList = () => {
 
     useEffect(() => {
         dispatch(sagaGetTrainingList())
-    }, [dispatch])
+    }, [])
 
     return (
         <React.Fragment>

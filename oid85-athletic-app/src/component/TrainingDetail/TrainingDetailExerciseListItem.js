@@ -1,5 +1,5 @@
 import React from 'react'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {fetchCurrentExercise, showEditExerciseModal} from '../../redux/actions/exerciseActions'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'

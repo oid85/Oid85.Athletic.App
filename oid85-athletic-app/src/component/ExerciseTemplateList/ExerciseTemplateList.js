@@ -16,7 +16,7 @@ export const ExerciseTemplateList = () => {
 
     useEffect(() => {
         dispatch(sagaGetExerciseTemplateList())
-    }, [dispatch])
+    }, [])
 
     return (
         <React.Fragment>
