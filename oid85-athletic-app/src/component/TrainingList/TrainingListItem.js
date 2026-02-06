@@ -28,7 +28,7 @@ export const TrainingListItem = ({key, training}) => {
                         dispatch(showAddPlanTrainingButton())
                         dispatch(hideRemovePlanTrainingButton())
                         }}>
-                            <div className='training-list-item-name'>{`${training.name} (x${training.totalCountIterations}/${training.totalWeight} кг)`}</div>
+                            <div className='training-list-item-name'>{`${training.name} (x${training.totalCountIterations}/${training.totalWeight} кг) (${training.count})`}</div>
                             <div className='training-list-item-description'>{`${training.description}`}</div>
                         </div>
                 <button 
