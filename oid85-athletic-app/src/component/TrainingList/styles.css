@@ -7,21 +7,30 @@
     overflow-y: scroll;
 }
 
-.training-list-item {
+.training-list-item-container {
     flex: 1;
     display: flex;
     flex-direction: row;      
 }
 
-.training-list-item-name {
+.training-list-item {
     border: 1px solid #C0C0C0;
     border-radius: 5px;
     text-align: left;    
-    height: 30px;
-    width: 420px;
-    font-size: 16px;
+    height: 50px;
+    width: 420px;    
     margin: 1px;
     padding: 1px;
+}
+
+.training-list-item-name {
+    height: 25px;
+    font-size: 16px;
+}
+
+.training-list-item-description {
+    height: 20px;
+    font-size: 12px;
 }
 
 .training-list-item-button {

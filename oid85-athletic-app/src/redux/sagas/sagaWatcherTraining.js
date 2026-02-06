@@ -29,14 +29,14 @@ function* sagaWorkerGetTrainingList() {
 
 function* sagaWorkerCreateTraining() {          
     let training = yield select(currentTraining)        
-    yield call(createTrainingFromApi, training.name)
+    yield call(createTrainingFromApi, training.name, training.description)
     let getTrainingListResult = yield call(getTrainingListFromApi)
     yield put(fetchGetTrainingList(getTrainingListResult))
 }
 
 function* sagaWorkerEditTraining() {         
     let training = yield select(currentTraining)        
-    yield call(editTrainingFromApi, training.id, training.name)
+    yield call(editTrainingFromApi, training.id, training.name, training.description)
     let getTrainingListResult = yield call(getTrainingListFromApi)
     yield put(fetchGetTrainingList(getTrainingListResult))
 }

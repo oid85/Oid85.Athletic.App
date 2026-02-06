@@ -12,18 +12,25 @@ export const TrainingListItem = ({key, training}) => {
 
     let color = intensityColor(training.totalWeight)
 
+    if (!training.description) {
+        training.description = ''
+    }
+
     return (
         <React.Fragment>
-            <div className='training-list-item'>
+            <div className='training-list-item-container'>
                 <div 
-                    className='training-list-item-name'
+                    className='training-list-item'
                     style={{backgroundColor: color}}
                     key={key}
                     onClick={() => {
                         dispatch(fetchCurrentTraining({...training}))
                         dispatch(showAddPlanTrainingButton())
                         dispatch(hideRemovePlanTrainingButton())
-                        }}>{`${training.name} (x${training.totalCountIterations}/${training.totalWeight} кг)`}</div>
+                        }}>
+                            <div className='training-list-item-name'>{`${training.name} (x${training.totalCountIterations}/${training.totalWeight} кг)`}</div>
+                            <div className='training-list-item-description'>{`${training.description}`}</div>
+                        </div>
                 <button 
                     className='btn btn-outline-link training-list-item-button'
                     onClick={() => {

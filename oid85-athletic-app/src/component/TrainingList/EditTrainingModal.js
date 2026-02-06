@@ -43,6 +43,14 @@ export const EditTrainingModal = () => {
                             onChange={ (event) => { 
                                 dispatch(fetchCurrentTraining({...currentTraining, name: event.target.value})) 
                                 }} />
+                        <input 
+                            className='form-control edit-training-modal-input' 
+                            type="text" 
+                            defaultValue={currentTraining.description} 
+                            placeholder='Описание' 
+                            onChange={ (event) => { 
+                                dispatch(fetchCurrentTraining({...currentTraining, description: event.target.value})) 
+                                }} />                                
                         <button 
                             className='btn btn-outline-primary edit-training-modal-save-button' 
                             onClick={ () => {
