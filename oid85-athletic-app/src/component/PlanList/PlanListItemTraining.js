@@ -28,6 +28,7 @@ export const PlanListItemTraining = ({training, planTraining}) => {
                     !training.name ? <div></div> :
                     <div>
                         <div className='plan-list-item-training-name'>{training.name}</div>
+                        <div className='plan-list-item-training-description'>{training.description}</div>
                         <div>{training.totalCountIterations} повт. {training.totalWeight} кг</div>                       
                     </div>
                 }
