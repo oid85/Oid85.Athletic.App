@@ -19,9 +19,6 @@ export const TrainingDetailPlanButton = () => {
                 :                 
                 <div>
                     {
-                        !addPlanTrainingButtonIsVisible
-                        ? <div></div>
-                        :
                         <button 
                         className='btn btn-outline-link'
                         onClick={() => {
