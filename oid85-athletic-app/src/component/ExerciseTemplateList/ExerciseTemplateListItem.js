@@ -16,7 +16,7 @@ export const ExerciseTemplateListItem = ({key, exerciseTemplate}) => {
                     key={key}
                     onClick={() => {
                         dispatch(fetchCurrentExerciseTemplate({...exerciseTemplate}))
-                        }}>{exerciseTemplate.name}</div>
+                        }}>{`${exerciseTemplate.name} (${exerciseTemplate.trainingCount})`}</div>
                 <button 
                     className='btn btn-outline-link exercise-template-list-item-button'
                     onClick={() => {
