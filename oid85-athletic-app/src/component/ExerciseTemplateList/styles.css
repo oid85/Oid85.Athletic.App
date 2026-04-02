@@ -1,6 +1,4 @@
 .exercise-template-list {
-    border: 1px solid #C0C0C0;
-    border-radius: 5px;
     height: 750px;
     width: 25%;
     margin: 1px;
@@ -14,8 +12,6 @@
 }
 
 .exercise-template-list-item-name {
-    border: 1px solid #C0C0C0;
-    border-radius: 5px;
     text-align: left;    
     height: 30px;
     width: 420px;

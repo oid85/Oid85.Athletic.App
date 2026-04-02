@@ -2,8 +2,8 @@
     flex: 1;
     display: flex;
     flex-direction: row;     
-    border: 1px solid #C0C0C0;
-    border-radius: 5px;
+    
+    
     height: 100px;
     width: 100%;
     overflow-y: scroll;    
@@ -13,8 +13,7 @@
     flex: 1;
     display: flex;
     flex-direction: row;   
-    border: 1px solid #C0C0C0;
-    border-radius: 5px;
+
     height: 95px;
     width: 270px;
     margin: 1px;  
@@ -25,8 +24,6 @@
 }
 
 .plan-list-item-calendar { 
-    border: 1px solid #C0C0C0;
-    border-radius: 5px;
     height: 91px;
     width: 40px;
     margin: 1px;  
@@ -37,8 +34,7 @@
 }
 
 .plan-list-item-training { 
-    border: 1px solid #C0C0C0;
-    border-radius: 5px;
+
     font-size: 14px;
     height: 90px;
     width: 223px;
